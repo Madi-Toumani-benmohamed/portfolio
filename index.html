@@ -1,0 +1,265 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" type="image/png" href="./images/favicon.png" />
+
+  <!-- Put your site title here -->
+  <title>
+    Ben | Ben Mohamed | DevOps / Cloud / Cybersécurité vivant en France.
+  </title>
+
+  <meta name="description" content="Add small description of yourslef.">
+  <!-- Add some coding keywords below, Ex: (React, CSS etc) -->
+  <meta name="keywords" content="Put your name, skills and some coding keywords" />
+  <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+
+  <!-- ***** Header ***** -->
+
+  <header class="header" role="banner" id="top">
+    <div class="row">
+      <nav class="nav" role="navigation">
+        <ul class="nav__items">
+          <li class="nav__item"><a href="#work" class="nav__link">Mes projets</a></li>
+          <li class="nav__item"><a href="#clients" class="nav__link">Stacks</a></li>
+          <li class="nav__item">
+            <a href="#about" class="nav__link">À propos</a>
+          </li>
+          <li class="nav__item">
+            <a href="#contact" class="nav__link">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="header__text-box row">
+      <div class="header__text">
+        <h1 class="heading-primary">
+          <!-- Replace the following name with your name -->
+          <span>Madi Ben-mohamed</span>
+        </h1>
+        <!-- Put a small paragraph about yourself -->
+        <p>Ingénieur DevOps / Cloud / Cybersécurité basé en Île-de-France.</p>
+        <a href="#contact" class="btn btn--pink">Me contacter</a>
+      </div>
+    </div>
+  </header>
+
+  <main role="main">
+
+    <!-- ***** Work ***** -->
+
+    <section class="work" id="work">
+      <div class="row">
+        <h2>Mes projets</h2>
+        <div class="work__boxes">
+
+          <!-- Each div with the work__box class is a project. -->
+
+          <div class="work__box">
+            <div class="work__text">
+              <h3>Cloud & Architecture</h3>
+              <p>
+                Conception et déploiement d’infrastructures cloud sur AWS et Azure avec gestion des ressources, réseau et services de base.              </p>
+              <ul class="work__list">
+                <li>AWS / Azure</li>
+                <li>architecture basique (VPC, VM, réseau)</li>
+                <li>déploiement infrastructure</li>
+
+              </ul>
+
+              <div class="work__links">
+                <a href="./domains/cloud.html" class="link__text">
+                  Voir le domaine <span>&rarr;</span>
+                </a>
+                <a href="https://github.com/nisarhassan12/portfolio" title="View Source Code" target="_blank">
+                  <img src="./images/github.svg" class="work__code" alt="GitHub">
+                </a>
+              </div>
+            </div>
+            <div class="work__image-box">
+              <img src="./images/cloud.png" class="work__image" alt="Project 1" />
+            </div>
+          </div>
+
+          <div class="work__box">
+            <div class="work__text">
+              <h3>Infrastructure as Code / DevOps</h3>
+              <p>
+                Automatisation du provisionnement et des déploiements via Terraform, Ansible et pipelines CI/CD.
+              </p>
+              <ul class="work__list">
+                <li>Terraform</li>
+                <li>Ansible</li>
+                <li>Automatisation d'infrastructure</li>
+                <li>Pipelines CI/CD</li>
+              </ul>
+
+              <div class="work__links">
+                <a href="./domains/devops.html" class="link__text">
+                  Voir le domaine <span>&rarr;</span>
+                </a>
+                <a href="#">
+                  <img src="./images/github.svg" class="work__code" title="View Source Code" alt="GitHub">
+                </a>
+              </div>
+            </div>
+            <div class="work__image-box">
+              <img src="./images/iac.png" class="work__image" alt="Project 1" />
+            </div>
+          </div>
+
+                    <div class="work__box">
+            <div class="work__text">
+              <h3>Conteneurisation & Orchestration</h3>
+              <p>
+                Mise en place et gestion d’environnements conteneurisés avec Docker et Kubernetes pour déploiements applicatifs.
+              </p>
+              <ul class="work__list">
+                <li>Docker</li>
+                <li>Kubernetes</li>
+                <li>LXC</li>
+              </ul>
+
+              <div class="work__links">
+                <a href="./domains/devops.html" class="link__text">
+                  Voir le domaine <span>&rarr;</span>
+                </a>
+                <a href="#">
+                  <img src="./images/github.svg" class="work__code" title="View Source Code" alt="GitHub">
+                </a>
+              </div>
+            </div>
+            <div class="work__image-box">
+              <img src="./images/container.png" class="work__image" alt="Project 1" />
+            </div>
+          </div>
+
+          <div class="work__box">
+            <div class="work__text">
+              <h3>Cybersécurité Opérationnelle</h3>
+              <p>
+                Sécurisation des systèmes Linux et cloud, analyse de vulnérabilités et durcissement des infrastructures.
+              <ul class="work__list">
+                <li>Hardening Linux</li>
+                <li>Pentesting / Vulnérabilités</li>
+                <li>OSINT / Malwares labs</li>
+              </ul>
+
+              <div class="work__links">
+                <a href="./domains/cybersecurity.html" class="link__text">
+                  Voir le domaine <span>&rarr;</span>
+                </a>
+                <a href="#">
+                  <img src="./images/github.svg" class="work__code" title="View Source Code" alt="GitHub">
+                </a>
+              </div>
+            </div>
+            <div class="work__image-box">
+              <img src="./images/security.png" class="work__image" alt="Project 3" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ***** stacks technologiques ***** -->
+
+    <section class="client" id="clients">
+      <div class="row">
+        <h2>Stacks Technologiques</h2>
+        <div class="client__logos">
+          <!-- Add logos of the clients or companies you'have worked with. -->
+          <img src="./images/aws-color.png" class="client__logo" alt="Company 2" />
+          <img src="./images/azur.png" class="client__logo" alt="Company 3" />
+          <img src="./images/Terraform-Cloud.png" class="client__logo" alt="Company 1" />
+          <img src="./images/docker.png" class="client__logo" alt="Company 1" />
+          <img src="./images/kubernetes.png" class="client__logo" alt="Company 3" />
+          <img src="./images/jenkins.png" class="client__logo" alt="Company 1" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ***** About ***** -->
+
+    <section class="about" id="about">
+      <div class="row">
+        <h2>À propos de moi</h2>
+        <div class="about__content">
+          <div class="about__text">
+            <!-- Replace the below paragraph with info about yourself -->
+            <p>
+            Ingénieur spécialisé en Cloud, DevOps et cybersécurité avec une expérience sur des environnements Linux, l’automatisation d’infrastructures et la sécurisation de systèmes. 
+            J’interviens sur des sujets liés au cloud, à l’Infrastructure as Code, aux pipelines CI/CD et aux environnements conteneurisés via Docker et Kubernetes.
+            </p>
+
+            <p>
+            À travers différentes missions techniques et projets personnels, j’ai développé une approche orientée automatisation, fiabilité et amélioration continue des infrastructures.
+            </p>
+            <!-- Provide a link to your resume -->
+            <a href="#" class="btn">Obtenir mon CV</a>
+          </div>
+
+          <div class="about__photo-container">
+            <!-- Add a nice photo of yourself -->
+            <img class="about__photo" src="./images/moi.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ***** Contact ***** -->
+
+  <section class="contact" id="contact">
+    <div class="row">
+      <h2>Me contacter</h2>
+      <div class="contact__info">
+        <p>
+          Je reste ouvert aux opportunités DevOps, Cloud et Infrastructure en Île-de-France.
+          N’hésitez pas à me contacter pour échanger autour d’un poste, d’une mission ou d’un projet technique.
+        </p>
+        <!-- Replace the email with yours -->
+        <a href="mailto:ben.mohamed0399@gmail.com" class="btn">M'envoyez un email</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ***** Footer ***** -->
+
+  <footer role="contentinfo" class="footer">
+    <div class="row">
+      <!-- Update the links to point to your accounts -->
+      <ul class="footer__social-links">
+        <li class="footer__social-link-item">
+          <a href="https://www.root-me.org/Hawki?lang=fr" title="Link to Root-Me Profile">
+            <img src="./images/rootme.png" class="footer__social-image" alt="Root-Me">
+          </a>
+        </li>
+        <li class="footer__social-link-item">
+          <a href=" https://github.com/Madi-Toumani-benmohamed/" title="Link to Github Profile">
+            <img src="./images/github.svg" class="footer__social-image" alt="Github">
+          </a>
+        </li>
+      
+        <li class="footer__social-link-item">
+          <a href="https://www.linkedin.com/in/ben-mohamed-madi/" title="Link to Linkedin Profile">
+            <img src="./images/linkedin.svg" title="Link to Linkedin Profile" class="footer__social-image" alt="Linkedin">
+          </a>
+        </li>
+      </ul>
+
+      <!-- If you give me some credit by keeping the below paragraph, will be huge for me 😊 Thanks. -->
+      <p>
+        &copy; 2026 - Ben-mohamed Madi</a>.
+      </p>
+   
+</body>
+
+</html>
