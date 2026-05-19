@@ -22,6 +22,7 @@ Ce portfolio présente une sélection de projets couvrant :
 
 Le site est structuré de manière modulaire par domaines techniques :
 
+```md
 /index.html
 /domains/
 cloud.html
@@ -34,6 +35,8 @@ container/
 devops/
 security/
 /index.css
+
+```
 
 
 Chaque domaine regroupe les projets associés avec :
