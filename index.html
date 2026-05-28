@@ -1,260 +1,1355 @@
-
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr" data-theme="dark">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio technique de Madi Ben Mohamed - Consultant Cloud / DevOps / Cybersécurité. Expertise AWS, Azure, Kubernetes, Terraform, Jenkins, Sécurité Opérationnelle." />
+  <meta name="keywords" content="Cloud, AWS, Azure, DevOps, Docker, Kubernetes, Jenkins, Terraform, Cybersécurité, Pentest, Hardening, IaC, CI/CD, Sécurité Opérationnelle, Réseaux, Linux, Windows Server, Formateur" />
+  <meta name="author" content="Madi Ben Mohamed" />
+  
   <link rel="shortcut icon" type="image/png" href="./images/favicon.png" />
-
-  <!-- Put your site title here -->
-  <title>
-    Ben | Ben Mohamed | DevOps / Cloud / Cybersécurité vivant en France.
-  </title>
-
-  <meta name="description" content="Add small description of yourslef.">
-  <!-- Add some coding keywords below, Ex: (React, CSS etc) -->
-  <meta name="keywords" content="Put your name, skills and some coding keywords" />
   <link rel="stylesheet" href="index.css" />
+  <!-- AOS - Animate On Scroll -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+  <title>Madi Ben Mohamed | Consultant Cloud / DevOps / Cybersécurité</title>
 </head>
 
 <body>
+  <!-- Side Navigation (Menu Latéral) -->
+  <nav class="side-nav" role="navigation" aria-label="Navigation latérale">
+    <ul class="side-nav__items">
+      <li class="side-nav__item"><a href="#experience" class="side-nav__link" aria-label="Expérience">
+        <span class="side-nav__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+            <path d="M2 17l10 5 10-5"/>
+            <path d="M2 12l10 5 10-5"/>
+          </svg>
+        </span>
+        <span class="side-nav__tooltip">Expérience</span>
+      </a></li>
+      <li class="side-nav__item"><a href="#work" class="side-nav__link" aria-label="Projets">
+        <span class="side-nav__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+            <line x1="8" y1="21" x2="16" y2="21"/>
+            <line x1="12" y1="17" x2="12" y2="21"/>
+          </svg>
+        </span>
+        <span class="side-nav__tooltip">Projets</span>
+      </a></li>
+      <li class="side-nav__item"><a href="certifications.html" class="side-nav__link" aria-label="Certifications">
+        <span class="side-nav__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          </svg>
+        </span>
+        <span class="side-nav__tooltip">Certifications</span>
+      </a></li>
+      <li class="side-nav__item"><a href="#skills" class="side-nav__link" aria-label="Compétences">
+        <span class="side-nav__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"/>
+            <circle cx="12" cy="12" r="6"/>
+            <circle cx="12" cy="12" r="2"/>
+          </svg>
+        </span>
+        <span class="side-nav__tooltip">Compétences</span>
+      </a></li>
+      <li class="side-nav__item"><a href="#about" class="side-nav__link" aria-label="À propos">
+        <span class="side-nav__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+          </svg>
+        </span>
+        <span class="side-nav__tooltip">À propos</span>
+      </a></li>
+      <li class="side-nav__item"><a href="#contact" class="side-nav__link" aria-label="Contact">
+        <span class="side-nav__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+            <polyline points="22,6 12,13 2,6"/>
+          </svg>
+        </span>
+        <span class="side-nav__tooltip">Contact</span>
+      </a></li>
+    </ul>
+  </nav>
 
-  <!-- ***** Header ***** -->
-
-  <header class="header" role="banner" id="top">
-    <div class="row">
-      <nav class="nav" role="navigation">
-        <ul class="nav__items">
-          <li class="nav__item"><a href="#work" class="nav__link">Mes projets</a></li>
-          <li class="nav__item"><a href="#clients" class="nav__link">Stacks</a></li>
-          <li class="nav__item">
-            <a href="#about" class="nav__link">À propos</a>
-          </li>
-          <li class="nav__item">
-            <a href="#contact" class="nav__link">Contact</a>
-          </li>
-        </ul>
-      </nav>
+  <!-- Fixed Main Navigation -->
+  <nav class="main-nav" role="navigation">
+    <div class="main-nav__container">
+      <button class="mobile-menu-btn" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="main-nav__items">
+        <li class="main-nav__item"><a href="#top" class="main-nav__link">Accueil</a></li>
+        <li class="main-nav__item"><a href="certifications.html" class="main-nav__link">Certifications</a></li>
+        <li class="main-nav__item"><a href="#experience" class="main-nav__link">Expérience</a></li>
+        <li class="main-nav__item"><a href="#work" class="main-nav__link">Projets</a></li>
+        <li class="main-nav__item"><a href="#skills" class="main-nav__link">Compétences</a></li>
+        <li class="main-nav__item"><a href="#about" class="main-nav__link">À propos</a></li>
+        <li class="main-nav__item"><a href="#contact" class="main-nav__link">Contact</a></li>
+      </ul>
     </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="header" role="banner" id="top">
     <div class="header__text-box row">
       <div class="header__text">
         <h1 class="heading-primary">
-          <!-- Replace the following name with your name -->
-          <span>Madi Ben-mohamed</span>
+          <span>Madi Ben Mohamed</span>
         </h1>
-        <!-- Put a small paragraph about yourself -->
-        <p>Ingénieur DevOps / Cloud / Cybersécurité basé en Île-de-France.</p>
-        <a href="#contact" class="btn btn--pink">Me contacter</a>
+        <p class="header__subtitle">
+          Consultant Cloud / DevOps / Cybersécurité
+        </p>
+        <p class="header__subtitle-detail">
+          Formateur & Ingénieur Infrastructure | Île-de-France
+        </p>
+        <p class="header__description">
+          Expert en <strong>Cloud Computing</strong>, <strong>DevOps</strong> et <strong>Cybersécurité</strong>.<br>
+          Je conçois, déploie et sécurise des infrastructures automatisées pour des environnements critiques.
+        </p>
+        <p class="header__cta-text">
+          Découvrez mon parcours et mes projets techniques :
+        </p>
+        <div class="header__buttons">
+          <a href="assets/CV.pdf" class="btn" target="_blank" rel="noopener">Mon CV</a>
+          <a href="#experience" class="btn btn--outline">Voir mon expérience</a>
+        </div>
       </div>
     </div>
   </header>
 
   <main role="main">
+    
+    <!-- NOUVELLE SECTION: Expérience Professionnelle -->
+    <section class="experience" id="experience" data-aos="fade-up">
+      <div class="row">
+        <h2 class="experience__title-main">
+          <span class="experience__title-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+              <path d="M2 17l10 5 10-5"/>
+              <path d="M2 12l10 5 10-5"/>
+            </svg>
+          </span>
+          Expérience Professionnelle
+        </h2>
+        <p class="section__subtitle">Parcours technique en Cloud, DevOps et Cybersécurité</p>
 
-    <!-- ***** Work ***** -->
+        <div class="timeline">
+          <!-- Expérience 1 -->
+          <div class="timeline__item">
+            <div class="timeline__line"></div>
+            <div class="timeline__marker">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                <path d="M2 17l10 5 10-5"/>
+                <path d="M2 12l10 5 10-5"/>
+              </svg>
+            </div>
+            <div class="timeline__content">
+              <div class="timeline__header">
+                <div class="timeline__job-icon timeline__job-icon--consulting">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                    <circle cx="9" cy="7" r="4"/>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                  </svg>
+                </div>
+                <div class="timeline__job-info">
+                  <h3 class="timeline__title">Consultant Cloud / DevOps / Infrastructure & Cybersécurité</h3>
+                  <div class="timeline__company">
+                    <span class="timeline__company-icon">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                        <line x1="16" y1="2" x2="16" y2="6"/>
+                        <line x1="8" y1="2" x2="8" y2="6"/>
+                        <line x1="3" y1="10" x2="21" y2="10"/>
+                      </svg>
+                    </span>
+                    IPSSI / NEXA / M2I / IBCEGOS / ORANGE / Boursorama Bank
+                  </div>
+                  <div class="timeline__meta">
+                    <span class="timeline__period">04/2024 - Aujourd'hui</span>
+                    <span class="timeline__duration">(2 ans 2 mois)</span>
+                    <span class="timeline__location">Paris, France</span>
+                  </div>
+                </div>
+              </div>
+              <div class="timeline__body">
+                <p class="timeline__summary">
+                  Expertise technique et pédagogique dispensée auprès d'établissements d'enseignement supérieur, d'entreprises et d'environnements techniques variés, couvrant le cloud, l'automatisation, l'administration système Linux et la cybersécurité.
+                </p>
+                <p class="timeline__note">
+                  Activité basée sur de multiples interventions courtes (3 à 21 jours) regroupées par domaines d'expertise :
+                </p>
+                
+                <div class="experience__responsibilities">
+                  <div class="experience__category">
+                    <div class="experience__category-header">
+                      <span class="experience__category-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                          <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                          <path d="M2 17l10 5 10-5"/>
+                          <path d="M2 12l10 5 10-5"/>
+                        </svg>
+                      </span>
+                      <h4 class="experience__category-title">Cloud & Infrastructure as Code</h4>
+                    </div>
+                    <ul class="experience__list">
+                      <li>Déploiement et automatisation d'infrastructures sur <strong>AWS et Azure</strong></li>
+                      <li>Provisionnement automatisé des ressources via <strong>Terraform</strong></li>
+                      <li>Déploiement de services Linux et d'environnements conteneurisés</li>
+                      <li>Mise en place d'architectures <strong>Docker et Kubernetes</strong> dans des contextes techniques et pédagogiques</li>
+                      <li>Administration et sécurisation des systèmes Linux</li>
+                    </ul>
+                  </div>
+                  
+                  <div class="experience__category">
+                    <div class="experience__category-header">
+                      <span class="experience__category-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                          <circle cx="12" cy="12" r="3"/>
+                          <path d="M12 1v6m0 6v6m11-7h-6m-6 0H1"/>
+                        </svg>
+                      </span>
+                      <h4 class="experience__category-title">DevOps & CI/CD</h4>
+                    </div>
+                    <ul class="experience__list">
+                      <li>Conception, mise en place et maintenance de pipelines <strong>CI/CD</strong></li>
+                      <li>Automatisation des tâches d'administration et de déploiement</li>
+                      <li>Industrialisation des workflows <strong>Docker et Git</strong></li>
+                      <li>Déploiement et configuration d'outils DevOps (<strong>Jenkins, SonarQube</strong>)</li>
+                      <li>Support technique et conseil sur les bonnes pratiques d'automatisation</li>
+                    </ul>
+                  </div>
+                  
+                  <div class="experience__category">
+                    <div class="experience__category-header">
+                      <span class="experience__category-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                          <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                          <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                        </svg>
+                      </span>
+                      <h4 class="experience__category-title">Sécurité & Hardening</h4>
+                    </div>
+                    <ul class="experience__list">
+                      <li>Administration des systèmes <strong>Linux et Windows Server</strong></li>
+                      <li><strong>Hardening Linux</strong> et sécurisation des services exposés</li>
+                      <li>Réalisation d'<strong>audits techniques</strong> et de contrôles de sécurité</li>
+                      <li>Analyse de vulnérabilités et réduction de la surface d'attaque</li>
+                      <li>Support à l'exploitation d'environnements techniques sécurisés</li>
+                    </ul>
+                  </div>
+                  
+                  <div class="experience__category">
+                    <div class="experience__category-header">
+                      <span class="experience__category-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                          <circle cx="12" cy="12" r="10"/>
+                          <path d="M12 16v-4M12 8h.01"/>
+                        </svg>
+                      </span>
+                      <h4 class="experience__category-title">Cybersécurité Offensive</h4>
+                    </div>
+                    <ul class="experience__list">
+                      <li>Analyses de sécurité et travaux de sécurisation des infrastructures</li>
+                      <li>Interventions sur la sécurité réseau, applicative et le contrôle d'accès</li>
+                      <li>Participation à des projets de <strong>sécurité offensive</strong> et d'analyse technique</li>
+                      <li>Sensibilisation et formation aux bonnes pratiques de cybersécurité</li>
+                    </ul>
+                  </div>
+                  
+                  <div class="experience__category">
+                    <div class="experience__category-header">
+                      <span class="experience__category-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                          <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                          <circle cx="9" cy="7" r="4"/>
+                          <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                          <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                        </svg>
+                      </span>
+                      <h4 class="experience__category-title">Formation & Pédagogie</h4>
+                    </div>
+                    <ul class="experience__list">
+                      <li>Conception et animation de formations techniques niveau <strong>Master 1 et Master 2</strong></li>
+                      <li>Enseignement sur <strong>Linux, Cloud, Docker, Kubernetes, CI/CD et cybersécurité</strong></li>
+                      <li>Encadrement de soutenances et accompagnement de projets techniques</li>
+                      <li>Vulgarisation de sujets techniques complexes</li>
+                    </ul>
+                  </div>
+                </div>
+                
+                <div class="experience__tags">
+                  <span class="tag tag--cloud">Cloud Computing</span>
+                  <span class="tag tag--aws">AWS</span>
+                  <span class="tag tag--azure">Microsoft Azure</span>
+                  <span class="tag tag--devops">DevOps</span>
+                  <span class="tag tag--security">Cybersécurité</span>
+                  <span class="tag tag--docker">Docker</span>
+                  <span class="tag tag--k8s">Kubernetes</span>
+                  <span class="tag tag--terraform">Terraform</span>
+                  <span class="tag tag--linux">Linux</span>
+                  <span class="tag tag--formation">Formation</span>
+                </div>
+              </div>
+            </div>
+          </div>
 
+          <!-- Expérience 2 -->
+          <div class="timeline__item">
+            <div class="timeline__line"></div>
+            <div class="timeline__marker">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+              </svg>
+            </div>
+            <div class="timeline__content">
+              <div class="timeline__header">
+                <div class="timeline__job-icon timeline__job-icon--security">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                    <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                  </svg>
+                </div>
+                <div class="timeline__job-info">
+                  <h3 class="timeline__title">Responsable Opérationnel Sécurité / Support N2</h3>
+                  <div class="timeline__company">
+                    <span class="timeline__company-icon">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                      </svg>
+                    </span>
+                    Altice
+                  </div>
+                  <div class="timeline__meta">
+                    <span class="timeline__period">07/2021 - 07/2024</span>
+                    <span class="timeline__duration">(3 ans 1 mois)</span>
+                    <span class="timeline__location">Paris, France</span>
+                  </div>
+                </div>
+              </div>
+              <div class="timeline__body">
+                <p class="timeline__summary">
+                  Alternance au sein d'une équipe d'exploitation et de support technique (niveau N2) intervenant sur des environnements clients grands comptes, avec une activité principale centrée sur le traitement d'incidents réseau, systèmes et téléphonie, et des contributions sur des sujets de sécurité opérationnelle.
+                </p>
+                
+                <div class="experience__responsibilities">
+                  <div class="experience__category">
+                    <div class="experience__category-header">
+                      <span class="experience__category-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                          <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                          <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+                          <line x1="12" y1="22.08" x2="12" y2="12"/>
+                        </svg>
+                      </span>
+                      <h4 class="experience__category-title">Support & Résolution d'Incidents</h4>
+                    </div>
+                    <ul class="experience__list">
+                      <li>Traitement et résolution d'incidents techniques sur infrastructures réseaux, systèmes et téléphonie</li>
+                      <li><strong>Support N2</strong> et analyse des dysfonctionnements en environnement de production</li>
+                      <li>Analyse d'incidents réseau et diagnostic de problèmes de connectivité et de services</li>
+                    </ul>
+                  </div>
+                  
+                  <div class="experience__category">
+                    <div class="experience__category-header">
+                      <span class="experience__category-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                          <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                          <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                        </svg>
+                      </span>
+                      <h4 class="experience__category-title">Sécurité Opérationnelle</h4>
+                    </div>
+                    <ul class="experience__list">
+                      <li>Participation à des activités de <strong>sécurité opérationnelle</strong> sur environnements Linux et systèmes internes</li>
+                      <li>Identification et qualification de vulnérabilités systèmes, réseau et applicatives</li>
+                      <li>Contribution à des actions de <strong>hardening</strong> et de réduction de surface d'attaque</li>
+                    </ul>
+                  </div>
+                  
+                  <div class="experience__category">
+                    <div class="experience__category-header">
+                      <span class="experience__category-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                          <circle cx="12" cy="12" r="10"/>
+                          <path d="M12 16v-4M12 8h.01"/>
+                        </svg>
+                      </span>
+                      <h4 class="experience__category-title">Amélioration Continue</h4>
+                    </div>
+                    <ul class="experience__list">
+                      <li>Participation à des travaux d'<strong>amélioration continue</strong> de la posture de sécurité</li>
+                      <li>Animation ponctuelle d'<strong>ateliers techniques</strong> autour des bonnes pratiques de cybersécurité</li>
+                    </ul>
+                  </div>
+                </div>
+                
+                <div class="experience__tags">
+                  <span class="tag tag--security">Sécurité Opérationnelle</span>
+                  <span class="tag tag--network">Réseaux</span>
+                  <span class="tag tag--network">Téléphonie</span>
+                  <span class="tag tag--network">Cisco</span>
+                  <span class="tag tag--network">Fortinet</span>
+                  <span class="tag tag--network">VoIP</span>
+                  <span class="tag tag--network">TCP/IP</span>
+                  <span class="tag tag--network">DNS</span>
+                  <span class="tag tag--network">DHCP</span>
+                  <span class="tag tag--linux">Linux</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Projets -->
     <section class="work" id="work">
       <div class="row">
-        <h2>Mes projets</h2>
+        <h2>Mes Projets Techniques</h2>
+        <p class="section__subtitle">Sélection de mes travaux par domaine d'expertise</p>
+
+        <!-- Filtrage par domaine -->
+        <div class="work__filters">
+          <button class="work__filter work__filter--active" data-filter="all">Tous</button>
+          <button class="work__filter" data-filter="cloud">Cloud</button>
+          <button class="work__filter" data-filter="devops">DevOps</button>
+          <button class="work__filter" data-filter="containers">Conteneurs</button>
+          <button class="work__filter" data-filter="security">Sécurité</button>
+        </div>
+
         <div class="work__boxes">
-
-          <!-- Each div with the work__box class is a project. -->
-
-          <div class="work__box">
+          <!-- Projet Cloud -->
+          <div class="work__box" data-category="cloud" data-aos="fade-right" data-aos-delay="100">
             <div class="work__text">
-              <h3>Cloud & Architecture</h3>
-              <p>
-                Conception et déploiement d’infrastructures cloud sur AWS et Azure avec gestion des ressources, réseau et services de base.              </p>
-              <ul class="work__list">
-                <li>AWS / Azure</li>
-                <li>architecture basique (VPC, VM, réseau)</li>
-                <li>déploiement infrastructure</li>
-
-              </ul>
-
+              <div class="work__category-badge">Cloud</div>
+              <h3 class="work__title">Infrastructure AWS Multi-AZ Haute Disponibilité</h3>
+              <p class="work__short-desc">Conception et déploiement d'une infrastructure résiliente avec Terraform, garantissant 99.9% de disponibilité.</p>
+              <div class="work__section">
+                <h4 class="work__section-title">Contexte</h4>
+                <p>Déploiement d'une infrastructure cloud modulaire et reproductible pour héberger des applications web critiques. Objectif : garantir une disponibilité élevée avec tolérance aux pannes.</p>
+              </div>
+              <div class="work__section">
+                <h4 class="work__section-title">Stack Technique</h4>
+                <ul class="work__list">
+                  <li>AWS (EC2, RDS Aurora, ELB, VPC, IAM, CloudFront, Route53)</li>
+                  <li>Terraform (HCL, modules, backend S3)</li>
+                  <li>Infrastructure as Code</li>
+                </ul>
+              </div>
+              <div class="work__section">
+                <h4 class="work__section-title">Points Clés</h4>
+                <ul class="work__list">
+                  <li><strong>Modularité :</strong> Architecture modulaire réutilisable pour différents environnements</li>
+                  <li><strong>Sécurité :</strong> Security Groups restrictifs, IAM roles avec principe de moindre privilège, chiffrement KMS</li>
+                  <li><strong>Automatisation :</strong> Déploiement en une commande, gestion d'état avec backend S3</li>
+                </ul>
+              </div>
               <div class="work__links">
-                <a href="./domains/cloud.html" class="link__text">
-                  Voir le domaine <span>&rarr;</span>
-                </a>
-                
-               
-                </a>
+                <a href="./domains/cloud.html" class="link__text">Voir tous les projets Cloud (6) <span>&rarr;</span></a>
               </div>
             </div>
             <div class="work__image-box">
-              <img src="./images/cloud.png" class="work__image" alt="Project 1" />
+              <img src="./images/cloud.png" class="work__image" alt="Infrastructure AWS">
             </div>
           </div>
 
-          <div class="work__box">
+          <!-- Projet DevOps -->
+          <div class="work__box" data-category="devops" data-aos="fade-right" data-aos-delay="200">
             <div class="work__text">
-              <h3>Infrastructure as Code / DevOps</h3>
-              <p>
-                Automatisation du provisionnement et des déploiements via Terraform, Ansible et pipelines CI/CD.
+              <div class="work__category-badge">DevOps</div>
+              <h3 class="work__title">Pipeline CI/CD avec Jenkins et SonarQube</h3>
+              <p class="work__short-desc">Pipeline automatisé intégrant tests unitaires, analyse de sécurité et déploiement rolling update.</p>
+              <div class="work__section">
+                <h4 class="work__section-title">Contexte</h4>
+                <p>Création d'un pipeline CI/CD complet pour une application PHP/MySQL avec qualité de code garantie.</p>
+              </div>
+              <div class="work__section">
+                <h4 class="work__section-title">Stack Technique</h4>
+                <ul class="work__list">
+                  <li>Jenkins (pipelines as code)</li>
+                  <li>SonarQube (analyse statique)</li>
+                  <li>Docker, GitHub Webhooks, PHPUnit</li>
+                </ul>
+              </div>
+              <div class="work__section">
+                <h4 class="work__section-title">Points Clés</h4>
+                <ul class="work__list">
+                  <li><strong>Automatisation :</strong> Déclenchement automatique via GitHub webhooks</li>
+                  <li><strong>Qualité :</strong> Gates SonarQube bloquantes (coverage > 80%, 0 bug critique)</li>
+                  <li><strong>Sécurité :</strong> Scan OWASP Dependency Check intégré</li>
+                </ul>
+              </div>
+              <div class="work__links">
+                <a href="./domains/devops.html" class="link__text">Voir tous les projets DevOps (7) <span>&rarr;</span></a>
+              </div>
+            </div>
+            <div class="work__image-box">
+              <img src="./images/iac.png" class="work__image" alt="Pipeline CI/CD">
+            </div>
+          </div>
+
+          <!-- Projet Conteneurs -->
+          <div class="work__box" data-category="containers" data-aos="fade-right" data-aos-delay="300">
+            <div class="work__text">
+              <div class="work__category-badge">Conteneurs</div>
+              <h3 class="work__title">Cluster Kubernetes Sécurisé</h3>
+              <p class="work__short-desc">Déploiement d'un cluster production avec Calico, RBAC et monitoring Prometheus/Grafana.</p>
+              <div class="work__section">
+                <h4 class="work__section-title">Contexte</h4>
+                <p>Mise en place d'un cluster Kubernetes pour héberger une application e-commerce avec scalabilité horizontale.</p>
+              </div>
+              <div class="work__section">
+                <h4 class="work__section-title">Stack Technique</h4>
+                <ul class="work__list">
+                  <li>Kubernetes (kubeadm, v1.27)</li>
+                  <li>Docker / containerd</li>
+                  <li>Calico (CNI avec Network Policies)</li>
+                  <li>Helm, Prometheus, Grafana</li>
+                </ul>
+              </div>
+              <div class="work__section">
+                <h4 class="work__section-title">Points Clés</h4>
+                <ul class="work__list">
+                  <li><strong>Sécurité :</strong> Network Policies, RBAC, Pod Security Policies</li>
+                  <li><strong>Disponibilité :</strong> HPA, Liveness/Readiness probes</li>
+                  <li><strong>Monitoring :</strong> Stack Prometheus/Grafana complète</li>
+                </ul>
+              </div>
+              <div class="work__links">
+                <a href="./domains/containerization.html" class="link__text">Voir tous les projets Conteneurs (6) <span>&rarr;</span></a>
+              </div>
+            </div>
+            <div class="work__image-box">
+              <img src="./images/container.png" class="work__image" alt="Cluster Kubernetes">
+            </div>
+          </div>
+
+          <!-- Projet Sécurité -->
+          <div class="work__box" data-category="security">
+            <div class="work__text">
+              <div class="work__category-badge">Sécurité</div>
+              <h3 class="work__title">Hardening Apache - Benchmark CIS</h3>
+              <p class="work__short-desc">Sécurisation complète d'un serveur Apache avec TLS 1.3, ModSecurity et Fail2Ban.</p>
+              <div class="work__section">
+                <h4 class="work__section-title">Contexte</h4>
+                <p>Application des recommandations CIS Level 1 et 2 pour sécuriser un serveur web hébergeant une application sensible.</p>
+              </div>
+              <div class="work__section">
+                <h4 class="work__section-title">Stack Technique</h4>
+                <ul class="work__list">
+                  <li>Apache 2.4, OpenSSL</li>
+                  <li>ModSecurity (OWASP CRS)</li>
+                  <li>Lynis, Fail2Ban, TLS 1.3</li>
+                </ul>
+              </div>
+              <div class="work__section">
+                <h4 class="work__section-title">Points Clés</h4>
+                <ul class="work__list">
+                  <li><strong>TLS :</strong> TLS 1.3, HSTS avec pré-chargement, OCSP Stapling</li>
+                  <li><strong>WAF :</strong> ModSecurity avec règles OWASP CRS</li>
+                  <li><strong>Protection :</strong> Fail2Ban pour brute-force, rate limiting</li>
+                </ul>
+              </div>
+              <div class="work__links">
+                <a href="./domains/security.html" class="link__text">Voir tous les projets Sécurité (4) <span>&rarr;</span></a>
+              </div>
+            </div>
+            <div class="work__image-box">
+              <img src="./images/security.png" class="work__image" alt="Hardening Apache">
+            </div>
+          </div>
+        </div>
+
+        <div class="work__more">
+          <p>Pour explorer tous mes projets par domaine :</p>
+          <div class="work__domain-links">
+            <a href="./domains/cloud.html" class="work__domain-link">
+              <span class="work__domain-icon">☁️</span>
+              <span class="work__domain-name">Cloud</span>
+              <span class="work__domain-count">6 projets</span>
+            </a>
+            <a href="./domains/devops.html" class="work__domain-link">
+              <span class="work__domain-icon">⚙️</span>
+              <span class="work__domain-name">DevOps</span>
+              <span class="work__domain-count">7 projets</span>
+            </a>
+            <a href="./domains/containerization.html" class="work__domain-link">
+              <span class="work__domain-icon">🐳</span>
+              <span class="work__domain-name">Conteneurs</span>
+              <span class="work__domain-count">6 projets</span>
+            </a>
+            <a href="./domains/security.html" class="work__domain-link">
+              <span class="work__domain-icon">🔒</span>
+              <span class="work__domain-name">Sécurité</span>
+              <span class="work__domain-count">4 projets</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Certifications -->
+    <section class="certifications" id="certifications" data-aos="fade-up">
+      <div class="row">
+        <h2>Certifications & Accréditations</h2>
+        <p class="section__subtitle">Validations officielles de mes compétences techniques</p>
+
+        <div class="certifications__grid">
+          <!-- Certification 1 - AWS Academy Educator -->
+          <div class="certification__card" data-aos="zoom-in" data-aos-delay="100">
+            <div class="certification__header">
+              <div class="certification__logo">
+                <img src="./images/certifications/aws.svg" alt="AWS" class="certification__img">
+              </div>
+              <div class="certification__provider">Amazon Web Services</div>
+            </div>
+            <div class="certification__body">
+              <h3 class="certification__title">AWS Academy Educator</h3>
+              <p class="certification__id">ID: <span class="certification__id-value">6bde73e0-f2a8-4621-b2a7-858a0a06a9de</span></p>
+              <div class="certification__meta">
+                <span class="certification__date">Obtenue: Mai 2026</span>
+                <span class="certification__validity">Expire: Mai 2027</span>
+              </div>
+              <p class="certification__description">
+                Formateur agréé AWS, certifié par Credly. Permet de dispenser des formations officielles sur les services et architectures cloud AWS.
               </p>
-              <ul class="work__list">
-                <li>Terraform</li>
-                <li>Ansible</li>
-                <li>Automatisation d'infrastructure</li>
-                <li>Pipelines CI/CD</li>
-              </ul>
-
-              <div class="work__links">
-                <a href="./domains/devops.html" class="link__text">
-                  Voir le domaine <span>&rarr;</span>
-                </a>
-
-              </div>
             </div>
-            <div class="work__image-box">
-              <img src="./images/iac.png" class="work__image" alt="Project 1" />
+            <div class="certification__footer">
+              <a href="https://www.credly.com/badges/6bde73e0-f2a8-4621-b2a7-858a0a06a9de/public_url" class="btn btn--small" target="_blank" rel="noopener">
+                Vérifier la certification
+              </a>
             </div>
           </div>
 
-                    <div class="work__box">
-            <div class="work__text">
-              <h3>Conteneurisation & Orchestration</h3>
-              <p>
-                Mise en place et gestion d’environnements conteneurisés avec Docker et Kubernetes pour déploiements applicatifs.
+          <!-- Certification 2 - Kubernetes -->
+          <div class="certification__card" data-aos="zoom-in" data-aos-delay="200">
+            <div class="certification__header">
+              <div class="certification__logo">
+                <img src="./images/certifications/kubernetes.svg" alt="Kubernetes" class="certification__img">
+              </div>
+              <div class="certification__provider"><img src="./images/certifications/linkedin.svg" alt="LinkedIn Learning" class="certification__platform-logo">LinkedIn Learning</div>
+            </div>
+            <div class="certification__body">
+              <h3 class="certification__title">Kubernetes Essential Training</h3>
+              <p class="certification__id">ID: LinkedIn Learning</p>
+              <div class="certification__meta">
+                <span class="certification__date">Obtenue: Septembre 2022</span>
+                <span class="certification__validity">Valide (pas d'expiration)</span>
+              </div>
+              <p class="certification__description">
+                Formation complète de 2h27 sur Kubernetes. Couvre les fondamentaux de l'orchestration de conteneurs, installation de clusters, gestion de Pods et services.
               </p>
-              <ul class="work__list">
-                <li>Docker</li>
-                <li>Kubernetes</li>
-                <li>LXC</li>
-              </ul>
-
-              <div class="work__links">
-                <a href="./domains/containerization.html" class="link__text">
-                  Voir le domaine <span>&rarr;</span>
-                </a>
-                <a href="#">
-
-              </div>
             </div>
-            <div class="work__image-box">
-              <img src="./images/container.png" class="work__image" alt="Project 1" />
+            <div class="certification__footer">
+              <a href="certificats/CertificateOfCompletion_Lessentiel de Kubernetes 2019.pdf" class="btn btn--small" target="_blank" rel="noopener">
+                Voir le certificat
+              </a>
             </div>
           </div>
 
-          <div class="work__box">
-            <div class="work__text">
-              <h3>Cybersécurité Opérationnelle</h3>
-              <p>
-                Sécurisation des systèmes Linux et cloud, analyse de vulnérabilités et durcissement des infrastructures.
-              <ul class="work__list">
-                <li>Hardening Linux</li>
-                <li>Pentesting / Vulnérabilités</li>
-                <li>OSINT / Malwares labs</li>
+          <!-- Certification 3 - vSphere -->
+          <div class="certification__card" data-aos="zoom-in" data-aos-delay="300">
+            <div class="certification__header">
+              <div class="certification__logo">
+                <img src="./images/certifications/vmware.svg" alt="VMware" class="certification__img">
+              </div>
+              <div class="certification__provider"><img src="./images/certifications/linkedin.svg" alt="LinkedIn Learning" class="certification__platform-logo">LinkedIn Learning</div>
+            </div>
+            <div class="certification__body">
+              <h3 class="certification__title">Learning vSphere 6</h3>
+              <p class="certification__id">ID: LinkedIn Learning</p>
+              <div class="certification__meta">
+                <span class="certification__date">Obtenue: Février 2022</span>
+                <span class="certification__validity">Valide (pas d'expiration)</span>
+              </div>
+              <p class="certification__description">
+                Formation de 2h29 sur VMware vSphere 6. Architecture du datacenter virtualisé, installation d'ESXi 6 et vCenter Server 6, gestion de VM.
+              </p>
+            </div>
+            <div class="certification__footer">
+              <a href="certificats/CertificateOfCompletion_Decouvrir vSphere 6.pdf" class="btn btn--small" target="_blank" rel="noopener">
+                Voir le certificat
+              </a>
+            </div>
+          </div>
+
+          <!-- Certification 4 - Windows Server -->
+          <div class="certification__card" data-aos="zoom-in" data-aos-delay="400">
+            <div class="certification__header">
+              <div class="certification__logo">
+                <img src="./images/certifications/microsoft.svg" alt="Microsoft" class="certification__img">
+              </div>
+              <div class="certification__provider"><img src="./images/certifications/linkedin.svg" alt="LinkedIn Learning" class="certification__platform-logo">LinkedIn Learning</div>
+            </div>
+            <div class="certification__body">
+              <h3 class="certification__title">Windows Server 2019 Essential Training</h3>
+              <p class="certification__id">ID: LinkedIn Learning</p>
+              <div class="certification__meta">
+                <span class="certification__date">Obtenue: Octobre 2021</span>
+                <span class="certification__validity">Valide (pas d'expiration)</span>
+              </div>
+              <p class="certification__description">
+                Formation complète de 4h23 sur Windows Server 2019. Installation, configuration du stockage, de l'identité et de l'accès, virtualisation avec Hyper-V.
+              </p>
+            </div>
+            <div class="certification__footer">
+              <a href="certificats/CertificateOfCompletion_Lessentiel de Windows Server 2019.pdf" class="btn btn--small" target="_blank" rel="noopener">
+                Voir le certificat
+              </a>
+            </div>
+          </div>
+
+          <!-- Certification 5 - PowerShell -->
+          <div class="certification__card" data-aos="zoom-in" data-aos-delay="500">
+            <div class="certification__header">
+              <div class="certification__logo">
+                <img src="./images/certifications/microsoft.svg" alt="Microsoft" class="certification__img">
+              </div>
+              <div class="certification__provider"><img src="./images/certifications/linkedin.svg" alt="LinkedIn Learning" class="certification__platform-logo">LinkedIn Learning</div>
+            </div>
+            <div class="certification__body">
+              <h3 class="certification__title">Windows PowerShell 7 Essential Training</h3>
+              <p class="certification__id">ID: LinkedIn Learning</p>
+              <div class="certification__meta">
+                <span class="certification__date">Obtenue: Août 2021</span>
+                <span class="certification__validity">Valide (pas d'expiration)</span>
+              </div>
+              <p class="certification__description">
+                Formation complète de 2h12 sur Windows PowerShell 7. Écriture de scripts, gestion de variables, automatisation des tâches d'administration.
+              </p>
+            </div>
+            <div class="certification__footer">
+              <a href="certificats/CertificateOfCompletion_Lessentiel de Windows PowerShell 7.pdf" class="btn btn--small" target="_blank" rel="noopener">
+                Voir le certificat
+              </a>
+            </div>
+          </div>
+
+          <!-- En préparation -->
+          <div class="certification__card certification__card--preparing">
+            <div class="certification__body">
+              <h3 class="certification__title">En préparation</h3>
+              <ul class="certification__list">
+                <li>CKA: Certified Kubernetes Administrator</li>
+                <li>AWS Certified Solutions Architect - Associate</li>
+                <li>AWS Certified SysOps Administrator</li>
+                <li>Microsoft Certified: Azure Administrator Associate</li>
+                <li>Certified Jenkins Engineer</li>
+                <li>Docker Certified Associate</li>
               </ul>
+            </div>
+          </div>
+        </div>
 
-              <div class="work__links">
-                <a href="./domains/security.html" class="link__text">
-                  Voir le domaine <span>&rarr;</span>
-                </a>
+        <div class="certifications__note">
+          <p>Toutes les certifications peuvent être vérifiées via les plateformes officielles (Credly, LinkedIn Learning).</p>
+        </div>
+      </div>
+    </section>
 
+    <!-- Section Compétences -->
+    <section class="skills" id="skills" data-aos="fade-up">
+      <div class="row">
+        <h2>Compétences</h2>
+        <p class="section__subtitle">Expertise technique en Cloud, DevOps et Cybersécurité</p>
+
+        <!-- Compétences Principales (Mise en avant) -->
+        <div class="skills-featured" data-aos="fade-up">
+          <h3 class="skills-featured__title">Domaines d'Expertise</h3>
+          <div class="skills-featured__grid">
+            <div class="skill-card skill-card--cloud" data-aos="zoom-in" data-aos-delay="100">
+              <div class="skill-card__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                  <path d="M2 17l10 5 10-5"/>
+                  <path d="M2 12l10 5 10-5"/>
+                </svg>
+              </div>
+              <h4 class="skill-card__title">Cloud Computing</h4>
+              <p class="skill-card__description">AWS, Azure, IaC, Architecture Cloud</p>
+              <div class="skill-card__tags">
+                <span>AWS</span>
+                <span>Azure</span>
+                <span>Terraform</span>
+                <span>EKS</span>
               </div>
             </div>
-            <div class="work__image-box">
-              <img src="./images/security.png" class="work__image" alt="Project 3" />
+
+            <div class="skill-card skill-card--devops" data-aos="zoom-in" data-aos-delay="200">
+              <div class="skill-card__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="3"/>
+                  <path d="M12 1v6m0 6v6m11-7h-6m-6 0H1"/>
+                </svg>
+              </div>
+              <h4 class="skill-card__title">DevOps & CI/CD</h4>
+              <p class="skill-card__description">Automatisation, Pipelines, Conteneurs</p>
+              <div class="skill-card__tags">
+                <span>Docker</span>
+                <span>Kubernetes</span>
+                <span>Jenkins</span>
+                <span>GitLab</span>
+              </div>
+            </div>
+
+            <div class="skill-card skill-card--security" data-aos="zoom-in" data-aos-delay="300">
+              <div class="skill-card__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                  <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                </svg>
+              </div>
+              <h4 class="skill-card__title">Cybersécurité</h4>
+              <p class="skill-card__description">Hardening, Pentest, SOC, Sécurité Cloud</p>
+              <div class="skill-card__tags">
+                <span>Hardening</span>
+                <span>Wazuh</span>
+                <span>Suricata</span>
+                <span>SIEM</span>
+              </div>
+            </div>
+
+            <div class="skill-card skill-card--infrastructure" data-aos="zoom-in" data-aos-delay="400">
+              <div class="skill-card__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                  <line x1="8" y1="21" x2="16" y2="21"/>
+                  <line x1="12" y1="17" x2="12" y2="21"/>
+                </svg>
+              </div>
+              <h4 class="skill-card__title">Infrastructure</h4>
+              <p class="skill-card__description">Réseaux, Systèmes, Virtualisation</p>
+              <div class="skill-card__tags">
+                <span>Linux</span>
+                <span>Windows Server</span>
+                <span>VMware</span>
+                <span>Hyper-V</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Compétences Techniques Détaillées -->
+        <div class="skills-detailed">
+          
+          <!-- Légende des niveaux -->
+          <div class="skills-legend">
+            <span class="skills-legend__title">Niveaux :</span>
+            <div class="skills-legend__items">
+              <div class="skills-legend__item">
+                <span class="skill-tag skill-tag--expert">Expert</span>
+              </div>
+              <div class="skills-legend__item">
+                <span class="skill-tag skill-tag--advanced">Avancé</span>
+              </div>
+              <div class="skills-legend__item">
+                <span class="skill-tag skill-tag--intermediate">Intermédiaire</span>
+              </div>
+              <div class="skills-legend__item">
+                <span class="skill-tag skill-tag--basic">Débutant</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Langues -->
+          <div class="skills-category" data-aos="fade-left" data-aos-delay="100">
+            <div class="skills-category__header">
+              <span class="skills-category__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"/>
+                  <line x1="2" y1="12" x2="22" y2="12"/>
+                  <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                </svg>
+              </span>
+              <h3 class="skills-category__title">Langues</h3>
+            </div>
+            <div class="skills-category__content">
+              <div class="skill-item">
+                <div class="skill-item__info">
+                  <span class="skill-item__name">Français</span>
+                  <span class="skill-item__level">Natif</span>
+                </div>
+                <div class="skill-item__bar">
+                  <div class="skill-item__progress" style="width: 100%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-item__info">
+                  <span class="skill-item__name">Anglais Technique</span>
+                  <span class="skill-item__level">Courant</span>
+                </div>
+                <div class="skill-item__bar">
+                  <div class="skill-item__progress" style="width: 85%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cloud & DevOps -->
+          <div class="skills-category" data-aos="fade-left" data-aos-delay="100">
+            <div class="skills-category__header">
+              <span class="skills-category__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                  <path d="M2 17l10 5 10-5"/>
+                  <path d="M2 12l10 5 10-5"/>
+                </svg>
+              </span>
+              <h3 class="skills-category__title">Cloud & DevOps</h3>
+            </div>
+            <div class="skills-category__content">
+              <div class="skill-tags">
+                <span class="skill-tag skill-tag--expert">AWS</span>
+                <span class="skill-tag skill-tag--intermediate">Azure</span>
+                <span class="skill-tag skill-tag--expert">Terraform</span>
+                <span class="skill-tag skill-tag--advanced">Kubernetes</span>
+                <span class="skill-tag skill-tag--expert">Docker</span>
+                <span class="skill-tag skill-tag--expert">Jenkins</span>
+                <span class="skill-tag skill-tag--intermediate">GitLab</span>
+                <span class="skill-tag skill-tag--intermediate">GitHub</span>
+                <span class="skill-tag skill-tag--intermediate">EKS</span>
+                <span class="skill-tag skill-tag--intermediate">Portainer</span>
+                <span class="skill-tag skill-tag--expert">Docker Compose</span>
+                <span class="skill-tag skill-tag--basic">Helm</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sécurité -->
+          <div class="skills-category" data-aos="fade-left" data-aos-delay="100">
+            <div class="skills-category__header">
+              <span class="skills-category__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                  <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                </svg>
+              </span>
+              <h3 class="skills-category__title">Cybersécurité</h3>
+            </div>
+            <div class="skills-category__content">
+              <div class="skill-tags">
+                <span class="skill-tag skill-tag--expert">Sécurité opérationnelle</span>
+                <span class="skill-tag skill-tag--expert">Hardening</span>
+                <span class="skill-tag skill-tag--expert">Analyse de vulnérabilités</span>
+                <span class="skill-tag skill-tag--advanced">Wazuh</span>
+                <span class="skill-tag skill-tag--advanced">Suricata</span>
+                <span class="skill-tag skill-tag--advanced">SIEM</span>
+                <span class="skill-tag skill-tag--advanced">Pentest</span>
+                <span class="skill-tag skill-tag--intermediate">Fortinet</span>
+                <span class="skill-tag skill-tag--advanced">Cisco</span>
+                <span class="skill-tag skill-tag--advanced">Iptables</span>
+                <span class="skill-tag skill-tag--intermediate">Sécurité réseau</span>
+                <span class="skill-tag skill-tag--advanced">Gestion IAM</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Infrastructure & Réseaux -->
+          <div class="skills-category" data-aos="fade-left" data-aos-delay="100">
+            <div class="skills-category__header">
+              <span class="skills-category__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                  <line x1="8" y1="21" x2="16" y2="21"/>
+                  <line x1="12" y1="17" x2="12" y2="21"/>
+                </svg>
+              </span>
+              <h3 class="skills-category__title">Infrastructure & Réseaux</h3>
+            </div>
+            <div class="skills-category__content">
+              <div class="skill-tags">
+                <span class="skill-tag skill-tag--expert">Linux</span>
+                <span class="skill-tag skill-tag--expert">Administration système</span>
+                <span class="skill-tag skill-tag--expert">Réseaux & Troubleshooting</span>
+                <span class="skill-tag skill-tag--advanced">Windows Server</span>
+                <span class="skill-tag skill-tag--advanced">VMware vSphere</span>
+                <span class="skill-tag skill-tag--advanced">Virtualisation</span>
+                <span class="skill-tag skill-tag--expert">Hyper-V</span>
+                <span class="skill-tag skill-tag--advanced">Proxmox</span>
+                <span class="skill-tag skill-tag--expert">TCP/IP</span>
+                <span class="skill-tag skill-tag--expert">DNS</span>
+                <span class="skill-tag skill-tag--expert">DHCP</span>
+                <span class="skill-tag skill-tag--advanced">VoIP</span>
+                <span class="skill-tag skill-tag--expert">VPN</span>
+                <span class="skill-tag skill-tag--expert">PfSense</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Développement & Scripting -->
+          <div class="skills-category" data-aos="fade-left" data-aos-delay="100">
+            <div class="skills-category__header">
+              <span class="skills-category__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M16 18l6-6-6-6"/>
+                  <path d="M12 20h-6l6-18h6"/>
+                </svg>
+              </span>
+              <h3 class="skills-category__title">Développement & Scripting</h3>
+            </div>
+            <div class="skills-category__content">
+              <div class="skill-tags">
+                <span class="skill-tag skill-tag--expert">Python</span>
+                <span class="skill-tag skill-tag--expert">Bash</span>
+                <span class="skill-tag skill-tag--advanced">PowerShell</span>
+                <span class="skill-tag skill-tag--expert">YAML</span>
+                <span class="skill-tag skill-tag--advanced">SQL</span>
+                <span class="skill-tag skill-tag--intermediate">JavaScript</span>
+                <span class="skill-tag skill-tag--intermediate">PHP</span>
+                <span class="skill-tag skill-tag--intermediate">Java</span>
+                <span class="skill-tag skill-tag--advanced">C</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Outils & Méthodologies -->
+          <div class="skills-category" data-aos="fade-left" data-aos-delay="100">
+            <div class="skills-category__header">
+              <span class="skills-category__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                  <polyline points="14,2 14,8 20,8"/>
+                  <line x1="16" y1="13" x2="8" y2="13"/>
+                  <line x1="16" y1="17" x2="8" y2="17"/>
+                </svg>
+              </span>
+              <h3 class="skills-category__title">Outils & Méthodologies</h3>
+            </div>
+            <div class="skills-category__content">
+              <div class="skill-tags">
+                <span class="skill-tag skill-tag--expert">CI/CD</span>
+                <span class="skill-tag skill-tag--expert">Infrastructure as Code</span>
+                <span class="skill-tag skill-tag--expert">Automatisation</span>
+                <span class="skill-tag skill-tag--advanced">Git</span>
+                <span class="skill-tag skill-tag--advanced">Make</span>
+                <span class="skill-tag skill-tag--intermediate">Apache HTTP Server</span>
+                <span class="skill-tag skill-tag--intermediate">NGINX</span>
+                <span class="skill-tag skill-tag--intermediate">SonarQube</span>
+                <span class="skill-tag skill-tag--advanced">IaC</span>
+                <span class="skill-tag skill-tag--advanced">DevOps</span>
+                <span class="skill-tag skill-tag--intermediate">DevSecOps</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Compétences Fonctionnelles -->
+          <div class="skills-category" data-aos="fade-left" data-aos-delay="100">
+            <div class="skills-category__header">
+              <span class="skills-category__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                  <circle cx="9" cy="7" r="4"/>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                </svg>
+              </span>
+              <h3 class="skills-category__title">Compétences Fonctionnelles & Soft Skills</h3>
+            </div>
+            <div class="skills-category__content">
+              <div class="skill-tags">
+                <span class="skill-tag skill-tag--expert">Animation de formation</span>
+                <span class="skill-tag skill-tag--expert">Veille technologique</span>
+                <span class="skill-tag skill-tag--expert">Analyse des incidents</span>
+                <span class="skill-tag skill-tag--expert">Résolution d'incidents</span>
+                <span class="skill-tag skill-tag--expert">Travail en équipe</span>
+                <span class="skill-tag skill-tag--advanced">Support technique</span>
+                <span class="skill-tag skill-tag--advanced">Audit</span>
+                <span class="skill-tag skill-tag--advanced">Contrôles de sécurité</span>
+                <span class="skill-tag skill-tag--intermediate">Ateliers techniques</span>
+                <span class="skill-tag skill-tag--intermediate">Sécurité des infrastructures</span>
+              </div>
+              <div class="soft-skills">
+                <div class="soft-skill">
+                  <span class="soft-skill__icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                    </svg>
+                  </span>
+                  <span>Adaptabilité</span>
+                </div>
+                <div class="soft-skill">
+                  <span class="soft-skill__icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M9 12l2 2 4-4"/>
+                      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                    </svg>
+                  </span>
+                  <span>Autonomie</span>
+                </div>
+                <div class="soft-skill">
+                  <span class="soft-skill__icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <circle cx="12" cy="12" r="10"/>
+                      <path d="M12 16v-4M12 8h.01"/>
+                    </svg>
+                  </span>
+                  <span>Curiosité</span>
+                </div>
+                <div class="soft-skill">
+                  <span class="soft-skill__icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                      <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+                      <line x1="12" y1="22.08" x2="12" y2="12"/>
+                    </svg>
+                  </span>
+                  <span>Rigueur</span>
+                </div>
+                <div class="soft-skill">
+                  <span class="soft-skill__icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <circle cx="12" cy="12" r="3"/>
+                      <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+                    </svg>
+                  </span>
+                  <span>Sens de l'analyse</span>
+                </div>
+                <div class="soft-skill">
+                  <span class="soft-skill__icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M12 19l7-7 3 3-7 7-3-3z"/>
+                      <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/>
+                      <path d="M2 2l7.586 7.586"/>
+                      <circle cx="11" cy="11" r="2"/>
+                    </svg>
+                  </span>
+                  <span>Apprentissage continu</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ***** stacks technologiques ***** -->
-
-    <section class="client" id="clients">
+    <!-- Section Formation -->
+    <section class="education" data-aos="fade-up" id="education">
       <div class="row">
-        <h2>Stacks Technologiques</h2>
-        <div class="client__logos">
-          <!-- Add logos of the clients or companies you'have worked with. -->
-          <img src="./images/aws-color.png" class="client__logo" alt="Company 2" />
-          <img src="./images/azur.png" class="client__logo" alt="Company 3" />
-          <img src="./images/Terraform-Cloud.png" class="client__logo" alt="Company 1" />
-          <img src="./images/docker.png" class="client__logo" alt="Company 1" />
-          <img src="./images/kubernetes.png" class="client__logo" alt="Company 3" />
-          <img src="./images/jenkins.png" class="client__logo" alt="Company 1" />
+        <h2>Formation</h2>
+        <p class="section__subtitle">Parcours académique en Cybersécurité et Cloud Computing</p>
+
+        <div class="timeline">
+          <!-- Formation 1 -->
+          <div class="timeline__item">
+            <div class="timeline__content">
+              <div class="timeline__header">
+                <h3 class="timeline__title">Mastère Cybersécurité – Spécialisation Cloud Computing</h3>
+                <div class="timeline__company">IPSSI</div>
+                <div class="timeline__period">07/2021 - 04/2024</div>
+                <div class="timeline__location">Paris</div>
+              </div>
+              <div class="timeline__body">
+                <p>
+                  Mastère spécialisé en cybersécurité avec une focalisation sur le Cloud Computing.
+                </p>
+                <div class="education__subjects">
+                  <h4 class="education__subjects-title">Principaux enseignements :</h4>
+                  <ul class="education__list">
+                    <li>Sécurité des infrastructures cloud <strong>AWS / Azure</strong></li>
+                    <li>Architecture systèmes sécurisés</li>
+                    <li>Virtualisation & conteneurisation</li>
+                    <li>Cloud computing</li>
+                    <li>DevOps & automatisation</li>
+                    <li>Sécurité des infrastructures</li>
+                  </ul>
+                </div>
+                <div class="experience__tags">
+                  <span class="tag">Cloud Computing</span>
+                  <span class="tag">Microsoft Azure</span>
+                  <span class="tag">Sécurité des infrastructures</span>
+                </div>
+              </div>
+            </div>
+            <div class="timeline__marker"></div>
+          </div>
+
+          <!-- Formation 2 -->
+          <div class="timeline__item">
+            <div class="timeline__content">
+              <div class="timeline__header">
+                <h3 class="timeline__title">Licence EPOCS — Électronique & IoT</h3>
+                <div class="timeline__company">IUT Aix-Marseille</div>
+                <div class="timeline__period">01/2019 - 12/2020</div>
+                <div class="timeline__location">Marseille</div>
+              </div>
+              <div class="timeline__body">
+                <p>
+                  Licence professionnelle en Électronique et Internet des Objets.
+                </p>
+                <div class="education__subjects">
+                  <h4 class="education__subjects-title">Principaux enseignements :</h4>
+                  <ul class="education__list">
+                    <li>Systèmes embarqués</li>
+                    <li>Réseaux industriels</li>
+                    <li>Électronique appliquée aux objets connectés</li>
+                  </ul>
+                </div>
+                <div class="experience__tags">
+                  <span class="tag">C</span>
+                  <span class="tag">IBM AIX</span>
+                  <span class="tag">IoT</span>
+                  <span class="tag">LoRA</span>
+                  <span class="tag">Python</span>
+                  <span class="tag">Sous-réseau</span>
+                  <span class="tag">TCP/IP</span>
+                </div>
+              </div>
+            </div>
+            <div class="timeline__marker"></div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- ***** About ***** -->
-
-    <section class="about" id="about">
+    <!-- Section À propos -->
+    <section class="about" data-aos="fade-up" id="about">
       <div class="row">
-        <h2>À propos de moi</h2>
-        <div class="about__content">
-          <div class="about__text">
-            <!-- Replace the below paragraph with info about yourself -->
-            <p>
-            Ingénieur spécialisé en Cloud, DevOps et cybersécurité avec une expérience sur des environnements Linux, l’automatisation d’infrastructures et la sécurisation de systèmes. 
-            J’interviens sur des sujets liés au cloud, à l’Infrastructure as Code, aux pipelines CI/CD et aux environnements conteneurisés via Docker et Kubernetes.
-            </p>
+ <h2>À propos de moi</h2>
 
-            <p>
-            À travers différentes missions techniques et projets personnels, j’ai développé une approche orientée automatisation, fiabilité et amélioration continue des infrastructures.
-            </p>
-            <!-- Provide a link to your resume -->
-            <a href="assets/CV.pdf" class="btn" target="_blank" rel="noopener">Obtenir mon CV</a>
+    <div class="about__content">
+      <div class="about__text">
+        <p>
+          <strong>Ingénieur Cloud, DevOps et Cybersécurité</strong>, spécialisé dans la conception et l’industrialisation d’infrastructures automatisées et sécurisées sur environnements Linux et cloud.
+        </p>
+
+        <p>
+          J’interviens sur la mise en place d’architectures orientées <strong>fiabilité, scalabilité et sécurité</strong>, avec une approche centrée sur l’automatisation et l’industrialisation des systèmes.
+        </p>
+
+        <p>
+          Mon approche technique repose sur :
+        </p>
+
+        <ul class="about__list">
+          <li><strong>Infrastructure as Code</strong> pour garantir reproductibilité, traçabilité et gestion versionnée des environnements</li>
+          <li><strong>Pipelines CI/CD</strong> pour sécuriser et accélérer les cycles de déploiement</li>
+          <li><strong>Approche DevSecOps</strong> intégrant la sécurité dès la conception et dans toute la chaîne de delivery</li>
+          <li><strong>Optimisation cloud</strong> orientée performance, résilience et maîtrise des coûts</li>
+        </ul>
+
+        <p>
+          En parallèle, je maintiens une activité continue de montée en compétence à travers des environnements de lab, des projets personnels en cloud et automatisation, ainsi qu’une pratique régulière de la cybersécurité opérationnelle (Root-Me, environnements virtualisés).
+        </p>
+
+        <p>
+          J’interviens également dans un cadre pédagogique en animation de formations techniques (Linux, Docker, Kubernetes, Cloud et cybersécurité) auprès d’étudiants de niveau Master ainsi que d'entreprises.
+        </p>
+
+            <div class="about__cta">
+              <a href="assets/CV.pdf" class="btn" target="_blank" rel="noopener">
+                Télécharger mon CV complet
+              </a>
+            </div>
           </div>
 
           <div class="about__photo-container">
-            <!-- Add a nice photo of yourself -->
-            <img class="about__photo" src="./images/moi.jpg" alt="" />
+            <img class="about__photo" src="./images/moi.jpg" alt="Madi Ben Mohamed">
           </div>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- ***** Contact ***** -->
-
-  <section class="contact" id="contact">
+  <!-- Section Contact -->
+  <section class="contact" data-aos="fade-up" id="contact">
     <div class="row">
       <h2>Me contacter</h2>
-      <div class="contact__info">
-        <p>
-          Je reste ouvert aux opportunités DevOps, Cloud et Infrastructure en Île-de-France.
-          N’hésitez pas à me contacter pour échanger autour d’un poste, d’une mission ou d’un projet technique.
-        </p>
-      
-        <a href="mailto:ben.mohamed0399@gmail.com" class="btn">M'envoyez un email</a>
+
+      <div class="contact__container">
+        <div class="contact__text">
+          <p>
+            Vous avez un projet Cloud, DevOps ou Sécurité ?<br>
+            Vous recherchez un profil technique pour renforcer votre équipe ?
+          </p>
+          <p>
+            Je suis disponible pour échanger autour d'opportunités professionnelles,
+            de collaborations techniques ou simplement de discussions sur les bonnes pratiques.
+          </p>
+        </div>
+
+        <div class="contact__actions">
+          <a href="mailto:ben.mohamed0399@gmail.com" class="btn btn--pink">
+            M'envoyer un email
+          </a>
+
+        
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ***** Footer ***** -->
-
+  <!-- Footer -->
   <footer role="contentinfo" class="footer">
     <div class="row">
-      <!-- Update the links to point to your accounts -->
+      <div class="footer__content">
+        <p class="footer__copyright">&copy; 2026 - Ben-mohamed Madi</p>
+        <div class="footer__links">
+          <a href="assets/CV.pdf" class="footer__link">CV</a>
+          <a href="#top" class="footer__link">Retour en haut</a>
+        </div>
+      </div>
       <ul class="footer__social-links">
         <li class="footer__social-link-item">
-          <a href="https://www.root-me.org/Hawki?lang=fr" title="Link to Root-Me Profile">
+          <a href="https://www.root-me.org/Hawki?lang=fr" title="Root-Me Profile">
             <img src="./images/rootme.png" class="footer__social-image" alt="Root-Me">
           </a>
         </li>
         <li class="footer__social-link-item">
-          <a href=" https://github.com/Madi-Toumani-benmohamed/" title="Link to Github Profile">
+          <a href="https://github.com/Madi-Toumani-benmohamed/" title="Github Profile">
             <img src="./images/github.svg" class="footer__social-image" alt="Github">
           </a>
         </li>
-      
         <li class="footer__social-link-item">
-          <a href="https://www.linkedin.com/in/ben-mohamed-madi/" title="Link to Linkedin Profile">
-            <img src="./images/linkedin.svg" title="Link to Linkedin Profile" class="footer__social-image" alt="Linkedin">
+          <a href="https://www.linkedin.com/in/ben-mohamed-madi/" title="Linkedin Profile">
+            <img src="./images/linkedin.svg" class="footer__social-image" alt="Linkedin">
           </a>
         </li>
       </ul>
+    </div>
+  </footer>
 
+  <!-- Progress bar -->
+  <div class="progress-bar"></div>
 
-      <p>
-        &copy; 2026 - Ben-mohamed Madi</a>.
-      </p>
-   
+  <!-- Theme Toggle Button -->
+  <div class="theme-toggle" aria-label="Basculer entre les thèmes clair et sombre" role="button" tabindex="0">
+    <div class="theme-toggle__icon">
+      <svg class="sun" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 17a5 5 0 1 0 0-10 5 5 0 0 0 0 10zm0 2a7 7 0 1 1 0-14 7 7 0 0 1 0 14z"/>
+      </svg>
+      <svg class="moon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/>
+      </svg>
+    </div>
+    <span class="theme-toggle__text">Thème</span>
+  </div>
+
+  <!-- Scroll indicators -->
+  <div class="scroll-indicators">
+    <div class="scroll-indicator active" data-target="top"></div>
+    <div class="scroll-indicator" data-target="experience"></div>
+    <div class="scroll-indicator" data-target="work"></div>
+    <div class="scroll-indicator" data-target="certifications"></div>
+    <div class="scroll-indicator" data-target="skills"></div>
+    <div class="scroll-indicator" data-target="education"></div>
+    <div class="scroll-indicator" data-target="about"></div>
+    <div class="scroll-indicator" data-target="contact"></div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="index.js"></script>
 </body>
-
 </html>

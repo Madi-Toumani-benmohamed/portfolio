@@ -1,28 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr" data-theme="dark">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="shortcut icon" type="image/png" href="../images/favicon.png" />
-
+  
   <title>
-    DevOps & CI/CD | Ben Mohamed | Cloud / DevOps / Cybersécurité
+    DevOps & CI/CD | Madi Ben Mohamed | Cloud / DevOps / Cybersécurité
   </title>
-
+  
   <meta name="description" content="Projets DevOps : CI/CD, Jenkins, Ansible, automatisation et pipelines." />
   <meta name="keywords" content="DevOps, CI/CD, Jenkins, Ansible, automation, pipelines" />
   <link rel="stylesheet" href="../index.css" />
+  <!-- AOS - Animate On Scroll -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
 </head>
 
 <body>
-
   <header class="header" role="banner" id="top">
-    <div class="row">
+    <div class="header__nav-container">
       <nav class="nav" role="navigation">
+        <button class="mobile-menu-btn" aria-label="Menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
         <ul class="nav__items">
-          <li class="nav__item"><a href="#work" class="nav__link">Projets DevOps</a></li>
-          <li class="nav__item"><a href="#about" class="nav__link">Domaine</a></li>
+          <li class="nav__item"><a href="#work" class="nav__link">Projets</a></li>
+          <li class="nav__item"><a href="#statistics" class="nav__link">Statistiques</a></li>
+          <li class="nav__item"><a href="#about" class="nav__link">Description</a></li>
+          <li class="nav__item"><a href="../certifications.html" class="nav__link">Certifications</a></li>
           <li class="nav__item"><a href="../index.html" class="nav__link">Accueil</a></li>
         </ul>
       </nav>
@@ -33,166 +39,350 @@
         <h1 class="heading-primary">
           <span>DevOps & CI/CD</span>
         </h1>
-        <p>Automatisation, pipelines et infrastructure as code.</p>
+        <p class="header__subtitle">
+          Automatisation, pipelines et infrastructure as code
+        </p>
+        <p class="header__description">
+          Automatisation complète des cycles de développement et déploiement<br>
+          avec Jenkins, Ansible, Docker et les bonnes pratiques DevOps.
+        </p>
       </div>
+    </div>
+    
+    <!-- Theme Toggle Button -->
+    <div class="theme-toggle" aria-label="Basculer entre les thèmes clair et sombre" role="button" tabindex="0">
+      <div class="theme-toggle__icon">
+        <svg class="sun" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 17a5 5 0 1 0 0-10 5 5 0 0 0 0 10zm0 2a7 7 0 1 1 0-14 7 7 0 0 1 0 14z"/>
+        </svg>
+        <svg class="moon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/>
+        </svg>
+      </div>
+      <span class="theme-toggle__text">Thème</span>
     </div>
   </header>
 
   <main role="main">
-
-    <section class="work" id="work">
+    <section class="work" id="work" data-aos="fade-up">
       <div class="row">
         <h2>Projets DevOps</h2>
+        <p class="section__subtitle">Pipelines CI/CD, automatisation et infrastructure as code</p>
+
+        <!-- Statistiques du domaine -->
+        <div class="domain-stats" id="statistics">
+          <div class="stats__grid">
+            <div class="stat__card">
+              <div class="stat__value">7</div>
+              <div class="stat__label">Projets complets</div>
+            </div>
+            <div class="stat__card">
+              <div class="stat__value">600+</div>
+              <div class="stat__label">Heures investies</div>
+            </div>
+            <div class="stat__card">
+              <div class="stat__value">6</div>
+              <div class="stat__label">Outils maîtrisés</div>
+            </div>
+          </div>
+        </div>
 
         <div class="work__boxes">
-
-          <!-- Jenkins Docker srv -->
-          <div class="work__box">
+          <!-- Jenkins Docker Server -->
+          <div class="work__box" data-aos="fade-up" data-aos-delay="100">
             <div class="work__text">
-              <h3>Jenkins Docker Server</h3>
-              <p>Configuration d’un serveur Jenkins conteneurisé pour exécuter des pipelines CI/CD.</p>
-              <ul class="work__list">
-                <li>Jenkins</li>
-                <li>Docker</li>
-                <li>CI/CD</li>
-              </ul>
+              <h3 class="work__title">Jenkins Docker Server</h3>
+              <p class="work__short-desc">Configuration d'un serveur Jenkins conteneurisé pour exécuter des pipelines CI/CD.</p>
+              
+              <div class="work__section">
+                <h4 class="work__section-title">Contexte</h4>
+                <p>Mise en place d'un serveur Jenkins dans Docker pour centraliser l'automatisation des builds et déploiements. Solution portable et facile à maintenir.</p>
+              </div>
+              
+              <div class="work__section">
+                <h4 class="work__section-title">Stack Technique</h4>
+                <ul class="work__list">
+                  <li>Jenkins LTS</li>
+                  <li>Docker / Docker Compose</li>
+                  <li>Plugins Jenkins (Git, Pipeline, Docker)</li>
+                  <li>Volume persistants</li>
+                </ul>
+              </div>
+              
+              <div class="work__section">
+                <h4 class="work__section-title">Points Clés</h4>
+                <ul class="work__list">
+                  <li><strong>Portabilité :</strong> Conteneur Docker pour un déploiement facile sur n'importe quel serveur</li>
+                  <li><strong>Persistance :</strong> Configuration des volumes Docker pour conserver les données</li>
+                  <li><strong>Extensibilité :</strong> Installation des plugins nécessaires pour CI/CD</li>
+                  <li><strong>Sécurité :</strong> Configuration des accès et des permissions</li>
+                </ul>
+              </div>
+
               <div class="work__links">
-                <a href="https://github.com/Madi-Toumani-benmohamed/srvweb-jenkins-docker" class="link__text">
-                  Voir le projet <span>&rarr;</span>
+                <a href="https://github.com/Madi-Toumani-benmohamed/srvweb-jenkins-docker" class="link__text" target="_blank" rel="noopener">
+                  Voir le code source <span>&rarr;</span>
                 </a>
               </div>
             </div>
             <div class="work__image-box">
-              <img src="../images/devops/jenkins-docker.png" class="work__image" alt="Jenkins Docker Server" />
+              <img src="../images/devops/jenkins-docker.png" class="work__image" alt="Jenkins Docker Server">
             </div>
           </div>
 
-          <!-- Jenkins Docker test -->
-          <div class="work__box">
+          <!-- Jenkins Docker Pipeline Test -->
+          <div class="work__box" data-aos="fade-up" data-aos-delay="100">
             <div class="work__text">
-              <h3>Jenkins Docker Pipeline Test</h3>
-              <p>Création d’un pipeline Jenkins pour builder des images Docker automatiquement.</p>
-              <ul class="work__list">
-                <li>Jenkins</li>
-                <li>Docker</li>
-                <li>Build automation</li>
-              </ul>
+              <h3 class="work__title">Jenkins Docker Pipeline Test</h3>
+              <p class="work__short-desc">Création d'un pipeline Jenkins pour builder des images Docker automatiquement.</p>
+              
+              <div class="work__section">
+                <h4 class="work__section-title">Contexte</h4>
+                <p>Automatisation du processus de build Docker via Jenkins. Objectif : standardiser la création d'images et garantir leur qualité.</p>
+              </div>
+              
+              <div class="work__section">
+                <h4 class="work__section-title">Stack Technique</h4>
+                <ul class="work__list">
+                  <li>Jenkins</li>
+                  <li>Docker</li>
+                  <li>Dockerfile</li>
+                  <li>Pipeline as Code</li>
+                </ul>
+              </div>
+              
+              <div class="work__section">
+                <h4 class="work__section-title">Points Clés</h4>
+                <ul class="work__list">
+                  <li><strong>Build automatisé :</strong> Construction d'images Docker à chaque commit</li>
+                  <li><strong>Tests intégrés :</strong> Exécution de tests dans le pipeline</li>
+                  <li><strong>Optimisation :</strong> Utilisation de cache pour accélérer les builds</li>
+                  <li><strong>Multi-stage :</strong> Builds Docker multi-stage pour des images optimisées</li>
+                </ul>
+              </div>
+
               <div class="work__links">
-                <a href="https://github.com/Madi-Toumani-benmohamed/IaC-Jenkins-Docker-test" class="link__text">
-                  Voir le projet <span>&rarr;</span>
+                <a href="https://github.com/Madi-Toumani-benmohamed/IaC-Jenkins-Docker-test" class="link__text" target="_blank" rel="noopener">
+                  Voir le code source <span>&rarr;</span>
                 </a>
               </div>
             </div>
             <div class="work__image-box">
-              <img src="../images/devops/jenkins-docker-test.png" class="work__image" alt="Jenkins Docker Pipeline" />
+              <img src="../images/devops/jenkins-docker-test.png" class="work__image" alt="Jenkins Docker Pipeline">
             </div>
           </div>
 
-          <!-- Jenkins Ansible app -->
-          <div class="work__box">
+          <!-- Jenkins Ansible App -->
+          <div class="work__box" data-aos="fade-up" data-aos-delay="100">
             <div class="work__text">
-              <h3>Jenkins + Ansible Application Deploy</h3>
-              <p>Pipeline CI/CD pour déployer une application de gestion de salaire avec Ansible.</p>
-              <ul class="work__list">
-                <li>Jenkins</li>
-                <li>Ansible</li>
-                <li>Automation deployment</li>
-              </ul>
+              <h3 class="work__title">Jenkins + Ansible Application Deploy</h3>
+              <p class="work__short-desc">Pipeline CI/CD pour déployer une application de gestion de salaire avec Ansible.</p>
+              
+              <div class="work__section">
+                <h4 class="work__section-title">Contexte</h4>
+                <p>Création d'un pipeline complet pour automatiser le déploiement d'une application PHP de gestion de salaire. Intégration de Jenkins et Ansible pour une livraison continue.</p>
+              </div>
+              
+              <div class="work__section">
+                <h4 class="work__section-title">Stack Technique</h4>
+                <ul class="work__list">
+                  <li>Jenkins</li>
+                  <li>Ansible</li>
+                  <li>Playbooks Ansible</li>
+                  <li>Pipeline as Code</li>
+                  <li>PHP, MySQL</li>
+                </ul>
+              </div>
+              
+              <div class="work__section">
+                <h4 class="work__section-title">Points Clés</h4>
+                <ul class="work__list">
+                  <li><strong>Automatisation complète :</strong> Du build à la mise en production</li>
+                  <li><strong>Configuration management :</strong> Ansible pour la configuration des serveurs</li>
+                  <li><strong>Idempotence :</strong> Les playbooks peuvent être exécutés plusieurs fois sans effet indésirable</li>
+                  <li><strong>Environnements multiples :</strong> Déploiement sur dev, staging et production</li>
+                </ul>
+              </div>
+
               <div class="work__links">
-                <a href="https://github.com/Madi-Toumani-benmohamed/Iac-Jenkins-Ansible-app-gestion-salaire" class="link__text">
-                  Voir le projet <span>&rarr;</span>
+                <a href="https://github.com/Madi-Toumani-benmohamed/Iac-Jenkins-Ansible-app-gestion-salaire" class="link__text" target="_blank" rel="noopener">
+                  Voir le code source <span>&rarr;</span>
                 </a>
               </div>
             </div>
             <div class="work__image-box">
-              <img src="../images/devops/jenkins-ansible-app.png" class="work__image" alt="Jenkins Ansible App Deploy" />
+              <img src="../images/devops/jenkins-ansible-app.png" class="work__image" alt="Jenkins Ansible App Deploy">
             </div>
           </div>
 
-          <!-- Jenkins Ansible webserver -->
-          <div class="work__box">
+          <!-- Jenkins Ansible Web Server -->
+          <div class="work__box" data-aos="fade-up" data-aos-delay="100">
             <div class="work__text">
-              <h3>Jenkins + Ansible Web Server</h3>
-              <p>Automatisation du déploiement d’applications web via pipeline Jenkins et Ansible.</p>
-              <ul class="work__list">
-                <li>Jenkins</li>
-                <li>Ansible</li>
-                <li>Web deployment</li>
-              </ul>
+              <h3 class="work__title">Jenkins + Ansible Web Server</h3>
+              <p class="work__short-desc">Automatisation du déploiement d'applications web via pipeline Jenkins et Ansible.</p>
+              
+              <div class="work__section">
+                <h4 class="work__section-title">Contexte</h4>
+                <p>Pipeline CI/CD pour le déploiement continu d'applications web. Utilisation d'Ansible pour la configuration des serveurs et le déploiement des applications.</p>
+              </div>
+              
+              <div class="work__section">
+                <h4 class="work__section-title">Stack Technique</h4>
+                <ul class="work__list">
+                  <li>Jenkins</li>
+                  <li>Ansible</li>
+                  <li>Web servers (Apache/Nginx)</li>
+                  <li>Git</li>
+                  <li>Pipeline as Code</li>
+                </ul>
+              </div>
+              
+              <div class="work__section">
+                <h4 class="work__section-title">Points Clés</h4>
+                <ul class="work__list">
+                  <li><strong>Déploiement continu :</strong> Automatisation complète du processus de déploiement</li>
+                  <li><strong>Rolling updates :</strong> Mise à jour sans temps d'arrêt</li>
+                  <li><strong>Rollback :</strong> Possibilité de revenir à une version précédente en cas de problème</li>
+                  <li><strong>Validation :</strong> Tests automatiques avant déploiement</li>
+                </ul>
+              </div>
+
               <div class="work__links">
-                <a href="https://github.com/Madi-Toumani-benmohamed/Iac-Jenkins-Ansible-webServer" class="link__text">
-                  Voir le projet <span>&rarr;</span>
+                <a href="https://github.com/Madi-Toumani-benmohamed/Iac-Jenkins-Ansible-webServer" class="link__text" target="_blank" rel="noopener">
+                  Voir le code source <span>&rarr;</span>
                 </a>
               </div>
             </div>
             <div class="work__image-box">
-              <img src="../images/devops/jenkins-ansible-web.png" class="work__image" alt="Jenkins Ansible Web Server" />
+              <img src="../images/devops/jenkins-ansible-web.png" class="work__image" alt="Jenkins Ansible Web Server">
             </div>
           </div>
 
-          <!-- Jenkins Sonarqube pipeline -->
-          <div class="work__box">
+          <!-- CI/CD Secure Pipeline -->
+          <div class="work__box" data-aos="fade-up" data-aos-delay="100">
             <div class="work__text">
-              <h3>CI/CD Secure Pipeline (SonarQube)</h3>
-              <p>Pipeline CI/CD sécurisé intégrant analyse de code avec SonarQube.</p>
-              <ul class="work__list">
-                <li>Jenkins</li>
-                <li>SonarQube</li>
-                <li>Security CI/CD</li>
-              </ul>
+              <h3 class="work__title">CI/CD Secure Pipeline (SonarQube)</h3>
+              <p class="work__short-desc">Pipeline CI/CD sécurisé intégrant analyse de code avec SonarQube.</p>
+              
+              <div class="work__section">
+                <h4 class="work__section-title">Contexte</h4>
+                <p>Création d'un pipeline qui intègre non seulement le build et le déploiement, mais aussi l'analyse de la qualité du code et la détection de vulnérabilités.</p>
+              </div>
+              
+              <div class="work__section">
+                <h4 class="work__section-title">Stack Technique</h4>
+                <ul class="work__list">
+                  <li>Jenkins</li>
+                  <li>SonarQube</li>
+                  <li>OWASP Dependency Check</li>
+                  <li>Pipeline as Code</li>
+                </ul>
+              </div>
+              
+              <div class="work__section">
+                <h4 class="work__section-title">Points Clés</h4>
+                <ul class="work__list">
+                  <li><strong>Analyse statique :</strong> SonarQube pour détecter bugs, vulnérabilités et code smells</li>
+                  <li><strong>Qualité du code :</strong> Gates de qualité bloquant le déploiement si les seuils ne sont pas atteints</li>
+                  <li><strong>Sécurité :</strong> Scan des dépendances avec OWASP Dependency Check</li>
+                  <li><strong>Rapports :</strong> Génération de rapports détaillés pour chaque build</li>
+                </ul>
+              </div>
+
               <div class="work__links">
-                <a href="https://github.com/Madi-Toumani-benmohamed/Iac-Pipeline-Jenkins-Sonarqube" class="link__text">
-                  Voir le projet <span>&rarr;</span>
+                <a href="https://github.com/Madi-Toumani-benmohamed/Iac-Pipeline-Jenkins-Sonarqube" class="link__text" target="_blank" rel="noopener">
+                  Voir le code source <span>&rarr;</span>
                 </a>
               </div>
             </div>
             <div class="work__image-box">
-              <img src="../images/devops/jenkins-sonarqube.png" class="work__image" alt="CI/CD SonarQube Pipeline" />
+              <img src="../images/devops/jenkins-sonarqube.png" class="work__image" alt="CI/CD SonarQube Pipeline">
             </div>
           </div>
 
-          <!-- Docker Jenkins build push -->
-          <div class="work__box">
+          <!-- Docker Build & Push -->
+          <div class="work__box" data-aos="fade-up" data-aos-delay="100">
             <div class="work__text">
-              <h3>Docker Build & Push Automation</h3>
-              <p>Pipeline automatisé pour build et push d’images Docker via Jenkins.</p>
-              <ul class="work__list">
-                <li>Docker</li>
-                <li>Jenkins</li>
-                <li>CI/CD pipeline</li>
-              </ul>
+              <h3 class="work__title">Docker Build & Push Automation</h3>
+              <p class="work__short-desc">Pipeline automatisé pour build et push d'images Docker via Jenkins.</p>
+              
+              <div class="work__section">
+                <h4 class="work__section-title">Contexte</h4>
+                <p>Automatisation complète du cycle de vie des images Docker : build, test, scan de sécurité et push vers un registry.</p>
+              </div>
+              
+              <div class="work__section">
+                <h4 class="work__section-title">Stack Technique</h4>
+                <ul class="work__list">
+                  <li>Docker</li>
+                  <li>Jenkins</li>
+                  <li>Docker Registry</li>
+                  <li>Docker Hub / Private Registry</li>
+                </ul>
+              </div>
+              
+              <div class="work__section">
+                <h4 class="work__section-title">Points Clés</h4>
+                <ul class="work__list">
+                  <li><strong>Pipeline complet :</strong> Du code source à l'image déployable</li>
+                  <li><strong>Sécurité :</strong> Scan des vulnérabilités dans les images</li>
+                  <li><strong>Tagging :</strong> Système de tagging cohérent (version, commit hash)</li>
+                  <li><strong>Optimisation :</strong> Images multi-stage pour réduire la taille</li>
+                </ul>
+              </div>
+
               <div class="work__links">
-                <a href="https://github.com/Madi-Toumani-benmohamed/Iac-Docker-Jenkins-build-push" class="link__text">
-                  Voir le projet <span>&rarr;</span>
+                <a href="https://github.com/Madi-Toumani-benmohamed/Iac-Docker-Jenkins-build-push" class="link__text" target="_blank" rel="noopener">
+                  Voir le code source <span>&rarr;</span>
                 </a>
               </div>
             </div>
             <div class="work__image-box">
-              <img src="../images/devops/docker-build-push.png" class="work__image" alt="Docker Build Push Pipeline" />
+              <img src="../images/devops/docker-build-push.png" class="work__image" alt="Docker Build Push Pipeline">
             </div>
           </div>
 
-          <!-- Webhooks test -->
-          <div class="work__box">
+          <!-- Webhooks Test -->
+          <div class="work__box" data-aos="fade-up" data-aos-delay="100">
             <div class="work__text">
-              <h3>Webhooks Testing</h3>
-              <p>Projet de test et validation des webhooks pour automatisation CI/CD.</p>
-              <ul class="work__list">
-                <li>Webhooks</li>
-                <li>Automation</li>
-                <li>Git integration</li>
-              </ul>
+              <h3 class="work__title">Webhooks Testing</h3>
+              <p class="work__short-desc">Projet de test et validation des webhooks pour automatisation CI/CD.</p>
+              
+              <div class="work__section">
+                <h4 class="work__section-title">Contexte</h4>
+                <p>Création d'un système pour tester et valider les webhooks GitHub avant leur intégration dans les pipelines de production.</p>
+              </div>
+              
+              <div class="work__section">
+                <h4 class="work__section-title">Stack Technique</h4>
+                <ul class="work__list">
+                  <li>Webhooks</li>
+                  <li>Git / GitHub</li>
+                  <li>Automation</li>
+                  <li>Node.js / Python</li>
+                </ul>
+              </div>
+              
+              <div class="work__section">
+                <h4 class="work__section-title">Points Clés</h4>
+                <ul class="work__list">
+                  <li><strong>Validation :</strong> Vérification du payload et des signatures des webhooks</li>
+                  <li><strong>Sécurité :</strong> Protection contre les requêtes malveillantes</li>
+                  <li><strong>Tests :</strong> Environnement de test isolé pour les webhooks</li>
+                  <li><strong>Monitoring :</strong> Logging des événements de webhooks</li>
+                </ul>
+              </div>
+
               <div class="work__links">
-                <a href="https://github.com/Madi-Toumani-benmohamed/webhooks-test" class="link__text">
-                  Voir le projet <span>&rarr;</span>
+                <a href="https://github.com/Madi-Toumani-benmohamed/webhooks-test" class="link__text" target="_blank" rel="noopener">
+                  Voir le code source <span>&rarr;</span>
                 </a>
               </div>
             </div>
             <div class="work__image-box">
-              <img src="../images/devops/webhooks.png" class="work__image" alt="Webhooks Testing" />
+              <img src="../images/devops/webhooks.png" class="work__image" alt="Webhooks Testing">
             </div>
           </div>
-
         </div>
       </div>
     </section>
@@ -203,44 +393,85 @@
         <div class="about__content">
           <div class="about__text">
             <p>
-              Ce domaine regroupe mes travaux sur l’automatisation des déploiements, les pipelines CI/CD,
-              ainsi que l’intégration d’outils comme Jenkins, Ansible et SonarQube dans des architectures cloud et containerisées.
+              Ce domaine regroupe mes travaux sur l'automatisation des déploiements, les pipelines CI/CD,
+              ainsi que l'intégration d'outils comme Jenkins, Ansible et SonarQube dans des architectures cloud et containerisées.
             </p>
+            <p>
+              J'ai développé une expertise dans :
+            </p>
+            <ul class="about__list">
+              <li><strong>La création de pipelines CI/CD complets</strong> avec validation, build, test et déploiement</li>
+              <li><strong>L'automatisation des tâches répétitives</strong> pour gagner en productivité</li>
+              <li><strong>La gestion de configuration</strong> avec Ansible pour des environnements cohérents</li>
+              <li><strong>L'intégration de la qualité et de la sécurité</strong> dans les pipelines (DevSecOps)</li>
+              <li><strong>L'optimisation des processus</strong> de développement et de livraison</li>
+            </ul>
+            <div class="about__cta">
+              <a href="../index.html" class="btn btn--outline">Retour à l'accueil</a>
+            </div>
           </div>
         </div>
       </div>
     </section>
-
   </main>
 
-  <!-- ***** Footer ***** -->
+  <!-- Progress bar -->
+  <div class="progress-bar"></div>
+
+  <!-- Theme Toggle Button -->
+  <div class="theme-toggle" aria-label="Basculer entre les thèmes clair et sombre" role="button" tabindex="0">
+    <div class="theme-toggle__icon">
+      <svg class="sun" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 17a5 5 0 1 0 0-10 5 5 0 0 0 0 10zm0 2a7 7 0 1 1 0-14 7 7 0 0 1 0 14z"/>
+      </svg>
+      <svg class="moon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/>
+      </svg>
+    </div>
+    <span class="theme-toggle__text">Thème</span>
+  </div>
 
   <footer role="contentinfo" class="footer">
     <div class="row">
-      <!-- Update the links to point to your accounts -->
+      <div class="footer__content">
+        <p class="footer__copyright">&copy; 2026 - Ben-mohamed Madi</p>
+        <div class="footer__links">
+          <a href="../assets/CV.pdf" class="footer__link">CV</a>
+          <a href="../index.html#contact" class="footer__link">Contact</a>
+          <a href="../index.html" class="footer__link">Accueil</a>
+        </div>
+      </div>
       <ul class="footer__social-links">
         <li class="footer__social-link-item">
-          <a href="https://www.root-me.org/Hawki?lang=fr" title="Link to Root-Me Profile">
+          <a href="https://www.root-me.org/Hawki?lang=fr" title="Root-Me Profile">
             <img src="../images/rootme.png" class="footer__social-image" alt="Root-Me">
           </a>
         </li>
         <li class="footer__social-link-item">
-          <a href=" https://github.com/Madi-Toumani-benmohamed/" title="Link to Github Profile">
+          <a href="https://github.com/Madi-Toumani-benmohamed/" title="Github Profile">
             <img src="../images/github.svg" class="footer__social-image" alt="Github">
           </a>
         </li>
-      
         <li class="footer__social-link-item">
-          <a href="https://www.linkedin.com/in/ben-mohamed-madi/" title="Link to Linkedin Profile">
-            <img src="../images/linkedin.svg" title="Link to Linkedin Profile" class="footer__social-image" alt="Linkedin">
+          <a href="https://www.linkedin.com/in/ben-mohamed-madi/" title="Linkedin Profile">
+            <img src="../images/linkedin.svg" class="footer__social-image" alt="Linkedin">
           </a>
         </li>
       </ul>
+    </div>
+  </footer>
 
-
-      <p>
-        &copy; 2026 - Ben-mohamed Madi</a>.
-      </p>
-
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out-sine',
+      delay: 100,
+      once: true,
+      mirror: false,
+      anchorPlacement: 'top-bottom'
+    });
+  </script>
+  <script src="../index.js"></script>
 </body>
 </html>

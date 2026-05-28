@@ -1,28 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr" data-theme="dark">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="shortcut icon" type="image/png" href="../images/favicon.png" />
-
+  
   <title>
-    Conteneurisation & Orchestration | Ben Mohamed | DevOps / Cloud / Cybersécurité
+    Conteneurisation & Orchestration | Madi Ben Mohamed | DevOps / Cloud / Cybersécurité
   </title>
-
+  
   <meta name="description" content="Projets Docker et Kubernetes - conteneurisation et orchestration." />
   <meta name="keywords" content="docker, kubernetes, containers, devops, orchestration" />
   <link rel="stylesheet" href="../index.css" />
+  <!-- AOS - Animate On Scroll -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
 </head>
 
 <body>
-
   <header class="header" role="banner" id="top">
-    <div class="row">
+    <div class="header__nav-container">
       <nav class="nav" role="navigation">
+        <button class="mobile-menu-btn" aria-label="Menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
         <ul class="nav__items">
-          <li class="nav__item"><a href="#work" class="nav__link">Projets Containers</a></li>
-          <li class="nav__item"><a href="#about" class="nav__link">Domaine</a></li>
+          <li class="nav__item"><a href="#work" class="nav__link">Projets</a></li>
+          <li class="nav__item"><a href="#statistics" class="nav__link">Statistiques</a></li>
+          <li class="nav__item"><a href="#about" class="nav__link">Description</a></li>
+          <li class="nav__item"><a href="../certifications.html" class="nav__link">Certifications</a></li>
           <li class="nav__item"><a href="../index.html" class="nav__link">Accueil</a></li>
         </ul>
       </nav>
@@ -33,145 +39,306 @@
         <h1 class="heading-primary">
           <span>Conteneurisation & Orchestration</span>
         </h1>
-        <p>Docker, Kubernetes et architecture applicative conteneurisée.</p>
+        <p class="header__subtitle">
+          Docker, Kubernetes et architecture applicative conteneurisée
+        </p>
+        <p class="header__description">
+          Mise en place et gestion d'environnements conteneurisés<br>
+          pour des déploiements applicatifs scalables et portables.
+        </p>
       </div>
+    </div>
+    
+    <!-- Theme Toggle Button -->
+    <div class="theme-toggle" aria-label="Basculer entre les thèmes clair et sombre" role="button" tabindex="0">
+      <div class="theme-toggle__icon">
+        <svg class="sun" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 17a5 5 0 1 0 0-10 5 5 0 0 0 0 10zm0 2a7 7 0 1 1 0-14 7 7 0 0 1 0 14z"/>
+        </svg>
+        <svg class="moon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/>
+        </svg>
+      </div>
+      <span class="theme-toggle__text">Thème</span>
     </div>
   </header>
 
   <main role="main">
-
-    <section class="work" id="work">
+    <section class="work" id="work" data-aos="fade-up">
       <div class="row">
-        <h2>Projets Containers</h2>
+        <h2>Projets Conteneurs</h2>
+        <p class="section__subtitle">Orchestration, scalabilité et déploiement conteneurisé</p>
+
+        <!-- Statistiques du domaine -->
+        <div class="domain-stats" id="statistics">
+          <div class="stats__grid">
+            <div class="stat__card">
+              <div class="stat__value">6</div>
+              <div class="stat__label">Projets complets</div>
+            </div>
+            <div class="stat__card">
+              <div class="stat__value">400+</div>
+              <div class="stat__label">Heures investies</div>
+            </div>
+            <div class="stat__card">
+              <div class="stat__value">5</div>
+              <div class="stat__label">Technologies maîtrisées</div>
+            </div>
+          </div>
+        </div>
 
         <div class="work__boxes">
-
           <!-- Kubernetes cluster -->
-          <div class="work__box">
+          <div class="work__box" data-aos="fade-up" data-aos-delay="100">
             <div class="work__text">
-              <h3>Cluster Kubernetes (IaC)</h3>
-              <p>Déploiement et configuration d’un cluster Kubernetes pour environnements de test et production.</p>
-              <ul class="work__list">
-                <li>Kubernetes</li>
-                <li>Shell / IaC</li>
-                <li>Orchestration</li>
-              </ul>
+              <h3 class="work__title">Cluster Kubernetes (IaC)</h3>
+              <p class="work__short-desc">Déploiement et configuration d'un cluster Kubernetes pour environnements de test et production.</p>
+              
+              <div class="work__section">
+                <h4 class="work__section-title">Contexte</h4>
+                <p>Déploiement d'une plateforme Kubernetes complète pour héberger des applications conteneurisées. Besoin d'une solution scalable, résiliente et facile à maintenir.</p>
+              </div>
+              
+              <div class="work__section">
+                <h4 class="work__section-title">Stack Technique</h4>
+                <ul class="work__list">
+                  <li>Kubernetes (kubeadm)</li>
+                  <li>Shell / IaC</li>
+                  <li>Docker / containerd</li>
+                  <li>Orchestration</li>
+                </ul>
+              </div>
+              
+              <div class="work__section">
+                <h4 class="work__section-title">Points Clés</h4>
+                <ul class="work__list">
+                  <li><strong>Déploiement :</strong> Installation et configuration complète du cluster</li>
+                  <li><strong>Scalabilité :</strong> Capacité à ajouter des nodes workers facilement</li>
+                  <li><strong>Résilience :</strong> Auto-healing des pods et nodes</li>
+                  <li><strong>Portabilité :</strong> Scripts d'installation pour différents environnements</li>
+                </ul>
+              </div>
+
               <div class="work__links">
-                <a href="https://github.com/Madi-Toumani-benmohamed/IaC-cluster-kubernetes" class="link__text">
-                  Voir le projet <span>&rarr;</span>
+                <a href="https://github.com/Madi-Toumani-benmohamed/IaC-cluster-kubernetes" class="link__text" target="_blank" rel="noopener">
+                  Voir le code source <span>&rarr;</span>
                 </a>
               </div>
             </div>
             <div class="work__image-box">
-              <img src="../images/container/kubernetes-cluster.png" class="work__image" alt="Kubernetes Cluster" />
+              <img src="../images/container/kubernetes-cluster.png" class="work__image" alt="Kubernetes Cluster">
             </div>
           </div>
 
           <!-- SoundBuzz -->
-          <div class="work__box">
+          <div class="work__box" data-aos="fade-up" data-aos-delay="100">
             <div class="work__text">
-              <h3>Kubernetes High Availability App</h3>
-              <p>Déploiement d’une application multimédia scalable avec haute disponibilité sur Kubernetes.</p>
-              <ul class="work__list">
-                <li>Kubernetes</li>
-                <li>HA architecture</li>
-                <li>Services distribués</li>
-              </ul>
+              <h3 class="work__title">Kubernetes High Availability App</h3>
+              <p class="work__short-desc">Déploiement d'une application multimédia scalable avec haute disponibilité sur Kubernetes.</p>
+              
+              <div class="work__section">
+                <h4 class="work__section-title">Contexte</h4>
+                <p>Déploiement d'une application de streaming audio (SoundBuzz) sur Kubernetes avec des exigences de haute disponibilité et de scalabilité pour gérer un trafic important.</p>
+              </div>
+              
+              <div class="work__section">
+                <h4 class="work__section-title">Stack Technique</h4>
+                <ul class="work__list">
+                  <li>Kubernetes</li>
+                  <li>HA architecture</li>
+                  <li>Services distribués</li>
+                  <li>Load balancing</li>
+                </ul>
+              </div>
+              
+              <div class="work__section">
+                <h4 class="work__section-title">Points Clés</h4>
+                <ul class="work__list">
+                  <li><strong>Haute disponibilité :</strong> Réplicas multiples pour chaque service</li>
+                  <li><strong>Scalabilité :</strong> Auto-scaling horizontal basé sur la charge</li>
+                  <li><strong>Stockage :</strong> Persistent Volumes pour les données utilisateur</li>
+                  <li><strong>Monitoring :</strong> Intégration avec les outils de monitoring Kubernetes</li>
+                </ul>
+              </div>
+
               <div class="work__links">
-                <a href="https://github.com/Madi-Toumani-benmohamed/Iac-Kubernetes-SoundBuzz" class="link__text">
-                  Voir le projet <span>&rarr;</span>
+                <a href="https://github.com/Madi-Toumani-benmohamed/Iac-Kubernetes-SoundBuzz" class="link__text" target="_blank" rel="noopener">
+                  Voir le code source <span>&rarr;</span>
                 </a>
               </div>
             </div>
             <div class="work__image-box">
-              <img src="../images/container/soundbuzz.png" class="work__image" alt="SoundBuzz Kubernetes" />
+              <img src="../images/container/soundbuzz.png" class="work__image" alt="SoundBuzz Kubernetes">
             </div>
           </div>
 
           <!-- Dockerfile examples -->
-          <div class="work__box">
+          <div class="work__box" data-aos="fade-up" data-aos-delay="100">
             <div class="work__text">
-              <h3>Dockerfile Examples</h3>
-              <p>Collection d’exemples de Dockerfiles pour différents environnements applicatifs.</p>
-              <ul class="work__list">
-                <li>Docker</li>
-                <li>Container build</li>
-                <li>Best practices</li>
-              </ul>
+              <h3 class="work__title">Dockerfile Examples</h3>
+              <p class="work__short-desc">Collection d'exemples de Dockerfiles pour différents environnements applicatifs.</p>
+              
+              <div class="work__section">
+                <h4 class="work__section-title">Contexte</h4>
+                <p>Création de Dockerfiles optimisés pour différents types d'applications (PHP, Python, Node.js, Nginx). Objectif : partager les bonnes pratiques de build d'images Docker.</p>
+              </div>
+              
+              <div class="work__section">
+                <h4 class="work__section-title">Stack Technique</h4>
+                <ul class="work__list">
+                  <li>Docker</li>
+                  <li>Dockerfile</li>
+                  <li>Container build</li>
+                  <li>Best practices</li>
+                </ul>
+              </div>
+              
+              <div class="work__section">
+                <h4 class="work__section-title">Points Clés</h4>
+                <ul class="work__list">
+                  <li><strong>Optimisation :</strong> Images multi-stage pour réduire la taille</li>
+                  <li><strong>Sécurité :</strong> Utilisation d'images officielles et mises à jour</li>
+                  <li><strong>Bonnes pratiques :</strong> USER non-root, cleanup, minimisation des couches</li>
+                  <li><strong>Documentation :</strong> Exemples commentés et documentés</li>
+                </ul>
+              </div>
+
               <div class="work__links">
-                <a href="https://github.com/Madi-Toumani-benmohamed/Iac-Dockerfile-Exemple" class="link__text">
-                  Voir le projet <span>&rarr;</span>
+                <a href="https://github.com/Madi-Toumani-benmohamed/Iac-Dockerfile-Exemple" class="link__text" target="_blank" rel="noopener">
+                  Voir le code source <span>&rarr;</span>
                 </a>
               </div>
             </div>
             <div class="work__image-box">
-              <img src="../images/container/dockerfile.png" class="work__image" alt="Dockerfile Examples" />
+              <img src="../images/container/dockerfile.png" class="work__image" alt="Dockerfile Examples">
             </div>
           </div>
 
           <!-- Docker build pipeline -->
-          <div class="work__box">
+          <div class="work__box" data-aos="fade-up" data-aos-delay="100">
             <div class="work__text">
-              <h3>Docker Build & Push Pipeline</h3>
-              <p>Automatisation du build et du push d’images Docker via pipeline CI/CD.</p>
-              <ul class="work__list">
-                <li>Docker</li>
-                <li>CI/CD</li>
-                <li>Automation</li>
-              </ul>
+              <h3 class="work__title">Docker Build & Push Pipeline</h3>
+              <p class="work__short-desc">Automatisation du build et du push d'images Docker via pipeline CI/CD.</p>
+              
+              <div class="work__section">
+                <h4 class="work__section-title">Contexte</h4>
+                <p>Pipeline automatisé pour builder, tester et pousser des images Docker vers un registry. Intégration avec les systèmes CI/CD existants.</p>
+              </div>
+              
+              <div class="work__section">
+                <h4 class="work__section-title">Stack Technique</h4>
+                <ul class="work__list">
+                  <li>Docker</li>
+                  <li>CI/CD</li>
+                  <li>Docker Registry</li>
+                  <li>Automation</li>
+                </ul>
+              </div>
+              
+              <div class="work__section">
+                <h4 class="work__section-title">Points Clés</h4>
+                <ul class="work__list">
+                  <li><strong>Pipeline complet :</strong> Du code source à l'image déployable</li>
+                  <li><strong>Tests :</strong> Exécution de tests dans le container</li>
+                  <li><strong>Sécurité :</strong> Scan des vulnérabilités avant le push</li>
+                  <li><strong>Tagging :</strong> Stratégie de versionnage cohérente</li>
+                </ul>
+              </div>
+
               <div class="work__links">
-                <a href="https://github.com/Madi-Toumani-benmohamed/Iac-Docker-Jenkins-build-push" class="link__text">
-                  Voir le projet <span>&rarr;</span>
+                <a href="https://github.com/Madi-Toumani-benmohamed/Iac-Docker-Jenkins-build-push" class="link__text" target="_blank" rel="noopener">
+                  Voir le code source <span>&rarr;</span>
                 </a>
               </div>
             </div>
             <div class="work__image-box">
-              <img src="../images/container/docker-pipeline.png" class="work__image" alt="Docker Pipeline" />
+              <img src="../images/container/docker-pipeline.png" class="work__image" alt="Docker Pipeline">
             </div>
           </div>
 
           <!-- Docker compose web infra -->
-          <div class="work__box">
+          <div class="work__box" data-aos="fade-up" data-aos-delay="100">
             <div class="work__text">
-              <h3>Docker Compose Web Infrastructure</h3>
-              <p>Infrastructure web complète avec PHP, MySQL et Nginx orchestrée via Docker Compose.</p>
-              <ul class="work__list">
-                <li>Docker Compose</li>
-                <li>Web stack</li>
-                <li>Nginx / MySQL / PHP</li>
-              </ul>
+              <h3 class="work__title">Docker Compose Web Infrastructure</h3>
+              <p class="work__short-desc">Infrastructure web complète avec PHP, MySQL et Nginx orchestrée via Docker Compose.</p>
+              
+              <div class="work__section">
+                <h4 class="work__section-title">Contexte</h4>
+                <p>Déploiement d'une stack LAMP complète (Linux, Apache/Nginx, MySQL, PHP) conteneurisée avec Docker Compose. Solution portable pour le développement et les tests.</p>
+              </div>
+              
+              <div class="work__section">
+                <h4 class="work__section-title">Stack Technique</h4>
+                <ul class="work__list">
+                  <li>Docker Compose</li>
+                  <li>Web stack (Nginx/Apache)</li>
+                  <li>PHP</li>
+                  <li>MySQL</li>
+                </ul>
+              </div>
+              
+              <div class="work__section">
+                <h4 class="work__section-title">Points Clés</h4>
+                <ul class="work__list">
+                  <li><strong>Portabilité :</strong> Environnement complet dans un fichier YAML</li>
+                  <li><strong>Isolation :</strong> Chaque service dans son propre container</li>
+                  <li><strong>Réseau :</strong> Communication entre containers via des networks dédiés</li>
+                  <li><strong>Volumes :</strong> Persistance des données avec des volumes Docker</li>
+                </ul>
+              </div>
+
               <div class="work__links">
-                <a href="https://github.com/Madi-Toumani-benmohamed/Iac-docker-compose-web-infra" class="link__text">
-                  Voir le projet <span>&rarr;</span>
+                <a href="https://github.com/Madi-Toumani-benmohamed/Iac-docker-compose-web-infra" class="link__text" target="_blank" rel="noopener">
+                  Voir le code source <span>&rarr;</span>
                 </a>
               </div>
             </div>
             <div class="work__image-box">
-              <img src="../images/container/docker-compose.png" class="work__image" alt="Docker Compose Web Infra" />
+              <img src="../images/container/docker-compose.png" class="work__image" alt="Docker Compose Web Infra">
             </div>
           </div>
 
           <!-- Docker security lab -->
-          <div class="work__box">
+          <div class="work__box" data-aos="fade-up" data-aos-delay="100">
             <div class="work__text">
-              <h3>Docker Security Lab</h3>
-              <p>Infrastructure conteneurisée avec firewall, monitoring et durcissement de services web.</p>
-              <ul class="work__list">
-                <li>Docker</li>
-                <li>Security</li>
-                <li>Firewall / monitoring</li>
-              </ul>
+              <h3 class="work__title">Docker Security Lab</h3>
+              <p class="work__short-desc">Infrastructure conteneurisée avec firewall, monitoring et durcissement de services web.</p>
+              
+              <div class="work__section">
+                <h4 class="work__section-title">Contexte</h4>
+                <p>Création d'un laboratoire sécurisé pour tester et valider des configurations Docker avec des bonnes pratiques de sécurité. Environnement isolé pour des tests sans risque.</p>
+              </div>
+              
+              <div class="work__section">
+                <h4 class="work__section-title">Stack Technique</h4>
+                <ul class="work__list">
+                  <li>Docker</li>
+                  <li>Security</li>
+                  <li>Firewall / monitoring</li>
+                  <li>Network Policies</li>
+                </ul>
+              </div>
+              
+              <div class="work__section">
+                <h4 class="work__section-title">Points Clés</h4>
+                <ul class="work__list">
+                  <li><strong>Sécurité :</strong> Application des bonnes pratiques CIS Docker Benchmark</li>
+                  <li><strong>Isolation :</strong> Séparation des containers par réseau et permissions</li>
+                  <li><strong>Monitoring :</strong> Surveillance des activités suspectes</li>
+                  <li><strong>Durcissement :</strong> Configuration sécurisée des containers et de l'hôte</li>
+                </ul>
+              </div>
+
               <div class="work__links">
-                <a href="https://github.com/Madi-Toumani-benmohamed/Pentest-Dockersec-lab" class="link__text">
-                  Voir le projet <span>&rarr;</span>
+                <a href="https://github.com/Madi-Toumani-benmohamed/Pentest-Dockersec-lab" class="link__text" target="_blank" rel="noopener">
+                  Voir le code source <span>&rarr;</span>
                 </a>
               </div>
             </div>
             <div class="work__image-box">
-              <img src="../images/container/docker-security.png" class="work__image" alt="Docker Security Lab" />
+              <img src="../images/container/docker-security.png" class="work__image" alt="Docker Security Lab">
             </div>
           </div>
-
         </div>
       </div>
     </section>
@@ -182,44 +349,85 @@
         <div class="about__content">
           <div class="about__text">
             <p>
-              Ce domaine regroupe mes travaux autour de Docker et Kubernetes, incluant l’orchestration de services,
-              les architectures distribuées et la mise en place d’environnements reproductibles.
+              Ce domaine regroupe mes travaux autour de Docker et Kubernetes, incluant l'orchestration de services,
+              les architectures distribuées et la mise en place d'environnements reproductibles.
             </p>
+            <p>
+              J'ai développé une expertise dans :
+            </p>
+            <ul class="about__list">
+              <li><strong>La création de containers optimisés</strong> avec Docker et les bonnes pratiques</li>
+              <li><strong>L'orchestration de services</strong> avec Kubernetes pour des déploiements scalables</li>
+              <li><strong>La gestion de clusters</strong> Kubernetes en production</li>
+              <li><strong>La sécurisation des environnements conteneurisés</strong> (CIS Benchmark, Network Policies)</li>
+              <li><strong>L'automatisation des déploiements</strong> avec Docker Compose et CI/CD</li>
+            </ul>
+            <div class="about__cta">
+              <a href="../index.html" class="btn btn--outline">Retour à l'accueil</a>
+            </div>
           </div>
         </div>
       </div>
     </section>
-
   </main>
 
-  <!-- ***** Footer ***** -->
+  <!-- Progress bar -->
+  <div class="progress-bar"></div>
+
+  <!-- Theme Toggle Button -->
+  <div class="theme-toggle" aria-label="Basculer entre les thèmes clair et sombre" role="button" tabindex="0">
+    <div class="theme-toggle__icon">
+      <svg class="sun" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 17a5 5 0 1 0 0-10 5 5 0 0 0 0 10zm0 2a7 7 0 1 1 0-14 7 7 0 0 1 0 14z"/>
+      </svg>
+      <svg class="moon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/>
+      </svg>
+    </div>
+    <span class="theme-toggle__text">Thème</span>
+  </div>
 
   <footer role="contentinfo" class="footer">
     <div class="row">
-      <!-- Update the links to point to your accounts -->
+      <div class="footer__content">
+        <p class="footer__copyright">&copy; 2026 - Ben-mohamed Madi</p>
+        <div class="footer__links">
+          <a href="../assets/CV.pdf" class="footer__link">CV</a>
+          <a href="../index.html#contact" class="footer__link">Contact</a>
+          <a href="../index.html" class="footer__link">Accueil</a>
+        </div>
+      </div>
       <ul class="footer__social-links">
         <li class="footer__social-link-item">
-          <a href="https://www.root-me.org/Hawki?lang=fr" title="Link to Root-Me Profile">
+          <a href="https://www.root-me.org/Hawki?lang=fr" title="Root-Me Profile">
             <img src="../images/rootme.png" class="footer__social-image" alt="Root-Me">
           </a>
         </li>
         <li class="footer__social-link-item">
-          <a href=" https://github.com/Madi-Toumani-benmohamed/" title="Link to Github Profile">
+          <a href="https://github.com/Madi-Toumani-benmohamed/" title="Github Profile">
             <img src="../images/github.svg" class="footer__social-image" alt="Github">
           </a>
         </li>
-      
         <li class="footer__social-link-item">
-          <a href="https://www.linkedin.com/in/ben-mohamed-madi/" title="Link to Linkedin Profile">
-            <img src="../images/linkedin.svg" title="Link to Linkedin Profile" class="footer__social-image" alt="Linkedin">
+          <a href="https://www.linkedin.com/in/ben-mohamed-madi/" title="Linkedin Profile">
+            <img src="../images/linkedin.svg" class="footer__social-image" alt="Linkedin">
           </a>
         </li>
       </ul>
+    </div>
+  </footer>
 
-
-      <p>
-        &copy; 2026 - Ben-mohamed Madi</a>.
-      </p>
-
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out-sine',
+      delay: 100,
+      once: true,
+      mirror: false,
+      anchorPlacement: 'top-bottom'
+    });
+  </script>
+  <script src="../index.js"></script>
 </body>
 </html>

@@ -1,28 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr" data-theme="dark">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="shortcut icon" type="image/png" href="../images/favicon.png" />
-
+  
   <title>
-    Cybersécurité | Ben Mohamed | Pentest / Hardening / Security Labs
+    Cybersécurité | Madi Ben Mohamed | Pentest / Hardening / Security Labs
   </title>
-
+  
   <meta name="description" content="Projets cybersécurité : pentest, hardening, malware et lab Docker sécurisé." />
   <meta name="keywords" content="cybersecurity, pentest, hardening, linux, malware, security lab" />
   <link rel="stylesheet" href="../index.css" />
+  <!-- AOS - Animate On Scroll -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
 </head>
 
 <body>
-
   <header class="header" role="banner" id="top">
-    <div class="row">
+    <div class="header__nav-container">
       <nav class="nav" role="navigation">
+        <button class="mobile-menu-btn" aria-label="Menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
         <ul class="nav__items">
-          <li class="nav__item"><a href="#work" class="nav__link">Projets Sécurité</a></li>
-          <li class="nav__item"><a href="#about" class="nav__link">Domaine</a></li>
+          <li class="nav__item"><a href="#work" class="nav__link">Projets</a></li>
+          <li class="nav__item"><a href="#statistics" class="nav__link">Statistiques</a></li>
+          <li class="nav__item"><a href="#about" class="nav__link">Description</a></li>
+          <li class="nav__item"><a href="../certifications.html" class="nav__link">Certifications</a></li>
           <li class="nav__item"><a href="../index.html" class="nav__link">Accueil</a></li>
         </ul>
       </nav>
@@ -33,103 +39,227 @@
         <h1 class="heading-primary">
           <span>Cybersécurité</span>
         </h1>
-        <p>Pentest, hardening, malware analysis et sécurité des infrastructures.</p>
+        <p class="header__subtitle">
+          Pentest, hardening, malware analysis et sécurité des infrastructures
+        </p>
+        <p class="header__description">
+          Sécurisation des systèmes Linux et cloud, analyse de vulnérabilités<br>
+          et durcissement des infrastructures avec des labs de test.
+        </p>
       </div>
+    </div>
+    
+    <!-- Theme Toggle Button -->
+    <div class="theme-toggle" aria-label="Basculer entre les thèmes clair et sombre" role="button" tabindex="0">
+      <div class="theme-toggle__icon">
+        <svg class="sun" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 17a5 5 0 1 0 0-10 5 5 0 0 0 0 10zm0 2a7 7 0 1 1 0-14 7 7 0 0 1 0 14z"/>
+        </svg>
+        <svg class="moon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/>
+        </svg>
+      </div>
+      <span class="theme-toggle__text">Thème</span>
     </div>
   </header>
 
   <main role="main">
-
-    <section class="work" id="work">
+    <section class="work" id="work" data-aos="fade-up">
       <div class="row">
         <h2>Projets Cybersécurité</h2>
+        <p class="section__subtitle">Sécurité offensive et défensive, analyse et durcissement</p>
+
+        <!-- Statistiques du domaine -->
+        <div class="domain-stats" id="statistics">
+          <div class="stats__grid">
+            <div class="stat__card">
+              <div class="stat__value">4</div>
+              <div class="stat__label">Projets complets</div>
+            </div>
+            <div class="stat__card">
+              <div class="stat__value">300+</div>
+              <div class="stat__label">Heures investies</div>
+            </div>
+            <div class="stat__card">
+              <div class="stat__value">8</div>
+              <div class="stat__label">Outils maîtrisés</div>
+            </div>
+          </div>
+        </div>
 
         <div class="work__boxes">
-
           <!-- Docker security lab -->
-          <div class="work__box">
+          <div class="work__box" data-aos="fade-up" data-aos-delay="100">
             <div class="work__text">
-              <h3>Docker Security Lab</h3>
-              <p>Infrastructure conteneurisée sécurisée avec firewall, monitoring et segmentation réseau.</p>
-              <ul class="work__list">
-                <li>Docker</li>
-                <li>Firewall</li>
-                <li>Monitoring</li>
-              </ul>
+              <h3 class="work__title">Docker Security Lab</h3>
+              <p class="work__short-desc">Infrastructure conteneurisée sécurisée avec firewall, monitoring et segmentation réseau.</p>
+              
+              <div class="work__section">
+                <h4 class="work__section-title">Contexte</h4>
+                <p>Création d'un environnement Docker sécurisé pour tester et valider des configurations avec des bonnes pratiques de sécurité. Permet d'expérimenter sans risque sur des scénarios réels.</p>
+              </div>
+              
+              <div class="work__section">
+                <h4 class="work__section-title">Stack Technique</h4>
+                <ul class="work__list">
+                  <li>Docker</li>
+                  <li>Docker Network Policies</li>
+                  <li>Firewall (iptables/nftables)</li>
+                  <li>Monitoring (Prometheus, Grafana)</li>
+                  <li>Segmentation réseau</li>
+                </ul>
+              </div>
+              
+              <div class="work__section">
+                <h4 class="work__section-title">Points Clés</h4>
+                <ul class="work__list">
+                  <li><strong>Isolation :</strong> Séparation complète des containers par réseau</li>
+                  <li><strong>Sécurité :</strong> Application du CIS Docker Benchmark</li>
+                  <li><strong>Monitoring :</strong> Surveillance en temps réel des activités</li>
+                  <li><strong>Durcissement :</strong> Configuration sécurisée de l'hôte Docker</li>
+                </ul>
+              </div>
+
               <div class="work__links">
-                <a href="https://github.com/Madi-Toumani-benmohamed/Pentest-Dockersec-lab" class="link__text">
-                  Voir le projet <span>&rarr;</span>
+                <a href="https://github.com/Madi-Toumani-benmohamed/Pentest-Dockersec-lab" class="link__text" target="_blank" rel="noopener">
+                  Voir le code source <span>&rarr;</span>
                 </a>
               </div>
             </div>
             <div class="work__image-box">
-              <img src="../images/security/docker-sec-lab.png" class="work__image" alt="Docker Security Lab" />
+              <img src="../images/security/docker-sec-lab.png" class="work__image" alt="Docker Security Lab">
             </div>
           </div>
 
           <!-- Malware C -->
-          <div class="work__box">
+          <div class="work__box" data-aos="fade-up" data-aos-delay="100">
             <div class="work__text">
-              <h3>Malware Development (C)</h3>
-              <p>Recherche et expérimentation sur le développement de malware en C à but éducatif et analyse de comportements système.</p>
-              <ul class="work__list">
-                <li>C</li>
-                <li>Malware analysis</li>
-                <li>Low-level systems</li>
-              </ul>
+              <h3 class="work__title">Malware Development (C)</h3>
+              <p class="work__short-desc">Recherche et expérimentation sur le développement de malware en C à but éducatif et analyse de comportements système.</p>
+              
+              <div class="work__section">
+                <h4 class="work__section-title">Contexte</h4>
+                <p>Projet de recherche pour comprendre les techniques utilisées par les malwares. Objectif éducatif : mieux défendre en comprenant les attaques. Tous les codes sont pour un usage en environnement contrôlé.</p>
+              </div>
+              
+              <div class="work__section">
+                <h4 class="work__section-title">Stack Technique</h4>
+                <ul class="work__list">
+                  <li>C (langage système)</li>
+                  <li>Malware analysis</li>
+                  <li>Low-level systems</li>
+                  <li>Process injection</li>
+                  <li>Network communication</li>
+                </ul>
+              </div>
+              
+              <div class="work__section">
+                <h4 class="work__section-title">Points Clés</h4>
+                <ul class="work__list">
+                  <li><strong>Recherche :</strong> Étude des techniques de malware (à des fins défensives)</li>
+                  <li><strong>Analyse :</strong> Compréhension des comportements système</li>
+                  <li><strong>Éducation :</strong> Ressources pour apprendre la cybersécurité offensive</li>
+                  <li><strong>Sécurité :</strong> Environnements isolés pour les tests</li>
+                </ul>
+              </div>
+
               <div class="work__links">
-                <a href="https://github.com/Madi-Toumani-benmohamed/C-malware" class="link__text">
-                  Voir le projet <span>&rarr;</span>
+                <a href="https://github.com/Madi-Toumani-benmohamed/C-malware" class="link__text" target="_blank" rel="noopener">
+                  Voir le code source <span>&rarr;</span>
                 </a>
               </div>
             </div>
             <div class="work__image-box">
-              <img src="../images/security/malware-c.png" class="work__image" alt="Malware C Project" />
+              <img src="../images/security/malware-c.png" class="work__image" alt="Malware C Project">
             </div>
           </div>
 
           <!-- Apache hardening -->
-          <div class="work__box">
+          <div class="work__box" data-aos="fade-up" data-aos-delay="100">
             <div class="work__text">
-              <h3>Apache Hardening</h3>
-              <p>Configuration sécurisée d’un serveur Apache avec SSL, durcissement et bonnes pratiques de sécurité web.</p>
-              <ul class="work__list">
-                <li>Linux</li>
-                <li>Apache</li>
-                <li>SSL / Hardening</li>
-              </ul>
+              <h3 class="work__title">Apache Hardening</h3>
+              <p class="work__short-desc">Configuration sécurisée d'un serveur Apache avec SSL, durcissement et bonnes pratiques de sécurité web.</p>
+              
+              <div class="work__section">
+                <h4 class="work__section-title">Contexte</h4>
+                <p>Sécurisation complète d'un serveur web Apache hébergeant une application sensible. Application des recommandations CIS (Center for Internet Security) et OWASP.</p>
+              </div>
+              
+              <div class="work__section">
+                <h4 class="work__section-title">Stack Technique</h4>
+                <ul class="work__list">
+                  <li>Linux (Ubuntu Server)</li>
+                  <li>Apache HTTP Server 2.4</li>
+                  <li>OpenSSL (TLS 1.3)</li>
+                  <li>ModSecurity (WAF)</li>
+                  <li>Fail2Ban</li>
+                </ul>
+              </div>
+              
+              <div class="work__section">
+                <h4 class="work__section-title">Points Clés</h4>
+                <ul class="work__list">
+                  <li><strong>TLS :</strong> Configuration TLS 1.3 avec cipher suites restreintes</li>
+                  <li><strong>WAF :</strong> ModSecurity avec règles OWASP Core Rule Set</li>
+                  <li><strong>Protection :</strong> Fail2Ban pour prévention des attaques par brute-force</li>
+                  <li><strong>Headers :</strong> Security Headers (CSP, HSTS, X-Frame-Options, etc.)</li>
+                  <li><strong>Audit :</strong> Score A+ sur SSL Labs après durcissement</li>
+                </ul>
+              </div>
+
               <div class="work__links">
-                <a href="https://github.com/Madi-Toumani-benmohamed/Hardening-WebServer-Apache" class="link__text">
-                  Voir le projet <span>&rarr;</span>
+                <a href="https://github.com/Madi-Toumani-benmohamed/Hardening-WebServer-Apache" class="link__text" target="_blank" rel="noopener">
+                  Voir le code source <span>&rarr;</span>
                 </a>
               </div>
             </div>
             <div class="work__image-box">
-              <img src="../images/security/apache-hardening.png" class="work__image" alt="Apache Hardening" />
+              <img src="../images/security/apache-hardening.png" class="work__image" alt="Apache Hardening">
             </div>
           </div>
 
           <!-- Pentest cloud lab -->
-          <div class="work__box">
+          <div class="work__box" data-aos="fade-up" data-aos-delay="100">
             <div class="work__text">
-              <h3>Cloud Pentest Lab</h3>
-              <p>Environnement de test pour exercices de pentesting sur infrastructure cloud isolée.</p>
-              <ul class="work__list">
-                <li>Pentesting</li>
-                <li>Cloud lab</li>
-                <li>Isolation réseau</li>
-              </ul>
+              <h3 class="work__title">Cloud Pentest Lab</h3>
+              <p class="work__short-desc">Environnement de test pour exercices de pentesting sur infrastructure cloud isolée.</p>
+              
+              <div class="work__section">
+                <h4 class="work__section-title">Contexte</h4>
+                <p>Création d'un laboratoire dédié aux tests de pénétration dans un environnement cloud isolé. Permet de pratiquer le pentesting de manière légale et sécurisée.</p>
+              </div>
+              
+              <div class="work__section">
+                <h4 class="work__section-title">Stack Technique</h4>
+                <ul class="work__list">
+                  <li>Cloud (AWS/Azure)</li>
+                  <li>Pentesting</li>
+                  <li>Kali Linux</li>
+                  <li>Metasploit, Nmap, Burp Suite</li>
+                  <li>Isolation réseau</li>
+                </ul>
+              </div>
+              
+              <div class="work__section">
+                <h4 class="work__section-title">Points Clés</h4>
+                <ul class="work__list">
+                  <li><strong>Isolation :</strong> Environnement complètement isolé du réseau de production</li>
+                  <li><strong>Sécurité :</strong> Pas de risque pour les systèmes réels</li>
+                  <li><strong>Outils :</strong> Collection complète d'outils de pentesting</li>
+                  <li><strong>Légal :</strong> Environnement conforme pour des tests autorisés</li>
+                </ul>
+              </div>
+
               <div class="work__links">
-                <a href="https://github.com/Madi-Toumani-benmohamed/Pentest-Ben-Cloud" class="link__text">
-                  Voir le projet <span>&rarr;</span>
+                <a href="https://github.com/Madi-Toumani-benmohamed/Pentest-Ben-Cloud" class="link__text" target="_blank" rel="noopener">
+                  Voir le code source <span>&rarr;</span>
                 </a>
               </div>
             </div>
             <div class="work__image-box">
-              <img src="../images/security/cloud-pentest.png" class="work__image" alt="Cloud Pentest Lab" />
+              <img src="../images/security/cloud-pentest.png" class="work__image" alt="Cloud Pentest Lab">
             </div>
           </div>
-
         </div>
       </div>
     </section>
@@ -142,43 +272,84 @@
             <p>
               Ce domaine regroupe mes travaux en cybersécurité offensive et défensive,
               incluant le pentesting, le hardening de systèmes Linux et web,
-              ainsi que des environnements de test sécurisés pour l’analyse de comportements systèmes.
+              ainsi que des environnements de test sécurisés pour l'analyse de comportements systèmes.
             </p>
+            <p>
+              J'ai développé une expertise dans :
+            </p>
+            <ul class="about__list">
+              <li><strong>Le hardening de systèmes</strong> (Linux, Apache, Docker) selon les benchmarks CIS</li>
+              <li><strong>Le pentesting</strong> avec Kali Linux et les outils standards</li>
+              <li><strong>L'analyse de vulnérabilités</strong> avec OpenVAS, Nikto, Nmap</li>
+              <li><strong>La configuration sécurisée</strong> des services web et cloud</li>
+              <li><strong>La création de labs sécurisés</strong> pour des tests sans risque</li>
+            </ul>
+            <div class="about__cta">
+              <a href="../index.html" class="btn btn--outline">Retour à l'accueil</a>
+            </div>
           </div>
         </div>
       </div>
     </section>
-
   </main>
 
-  <!-- ***** Footer ***** -->
+  <!-- Progress bar -->
+  <div class="progress-bar"></div>
+
+  <!-- Theme Toggle Button -->
+  <div class="theme-toggle" aria-label="Basculer entre les thèmes clair et sombre" role="button" tabindex="0">
+    <div class="theme-toggle__icon">
+      <svg class="sun" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 17a5 5 0 1 0 0-10 5 5 0 0 0 0 10zm0 2a7 7 0 1 1 0-14 7 7 0 0 1 0 14z"/>
+      </svg>
+      <svg class="moon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/>
+      </svg>
+    </div>
+    <span class="theme-toggle__text">Thème</span>
+  </div>
 
   <footer role="contentinfo" class="footer">
     <div class="row">
-      <!-- Update the links to point to your accounts -->
+      <div class="footer__content">
+        <p class="footer__copyright">&copy; 2026 - Ben-mohamed Madi</p>
+        <div class="footer__links">
+          <a href="../assets/CV.pdf" class="footer__link">CV</a>
+          <a href="../index.html#contact" class="footer__link">Contact</a>
+          <a href="../index.html" class="footer__link">Accueil</a>
+        </div>
+      </div>
       <ul class="footer__social-links">
         <li class="footer__social-link-item">
-          <a href="https://www.root-me.org/Hawki?lang=fr" title="Link to Root-Me Profile">
+          <a href="https://www.root-me.org/Hawki?lang=fr" title="Root-Me Profile">
             <img src="../images/rootme.png" class="footer__social-image" alt="Root-Me">
           </a>
         </li>
         <li class="footer__social-link-item">
-          <a href=" https://github.com/Madi-Toumani-benmohamed/" title="Link to Github Profile">
+          <a href="https://github.com/Madi-Toumani-benmohamed/" title="Github Profile">
             <img src="../images/github.svg" class="footer__social-image" alt="Github">
           </a>
         </li>
-      
         <li class="footer__social-link-item">
-          <a href="https://www.linkedin.com/in/ben-mohamed-madi/" title="Link to Linkedin Profile">
-            <img src="../images/linkedin.svg" title="Link to Linkedin Profile" class="footer__social-image" alt="Linkedin">
+          <a href="https://www.linkedin.com/in/ben-mohamed-madi/" title="Linkedin Profile">
+            <img src="../images/linkedin.svg" class="footer__social-image" alt="Linkedin">
           </a>
         </li>
       </ul>
+    </div>
+  </footer>
 
-
-      <p>
-        &copy; 2026 - Ben-mohamed Madi</a>.
-      </p>
-
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out-sine',
+      delay: 100,
+      once: true,
+      mirror: false,
+      anchorPlacement: 'top-bottom'
+    });
+  </script>
+  <script src="../index.js"></script>
 </body>
 </html>

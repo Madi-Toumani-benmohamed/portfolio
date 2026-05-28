@@ -1,28 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr" data-theme="dark">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="shortcut icon" type="image/png" href="../images/favicon.png" />
-
+  
   <title>
-    Cloud & Architecture | Ben Mohamed | DevOps / Cloud / Cybersécurité
+    Cloud & Architecture | Madi Ben Mohamed | DevOps / Cloud / Cybersécurité
   </title>
-
+  
   <meta name="description" content="Projets Cloud AWS et Azure - Infrastructure as Code et architecture cloud." />
   <meta name="keywords" content="cloud, AWS, Azure, Terraform, infrastructure as code, DevOps" />
   <link rel="stylesheet" href="../index.css" />
+  <!-- AOS - Animate On Scroll -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
 </head>
 
 <body>
-
   <header class="header" role="banner" id="top">
-    <div class="row">
+    <div class="header__nav-container">
       <nav class="nav" role="navigation">
+        <button class="mobile-menu-btn" aria-label="Menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
         <ul class="nav__items">
-          <li class="nav__item"><a href="#work" class="nav__link">Projets Cloud</a></li>
+          <li class="nav__item"><a href="#work" class="nav__link">Projets</a></li>
+          <li class="nav__item"><a href="#statistics" class="nav__link">Statistiques</a></li>
           <li class="nav__item"><a href="#about" class="nav__link">Description</a></li>
+          <li class="nav__item"><a href="../certifications.html" class="nav__link">Certifications</a></li>
           <li class="nav__item"><a href="../index.html" class="nav__link">Accueil</a></li>
         </ul>
       </nav>
@@ -33,145 +39,311 @@
         <h1 class="heading-primary">
           <span>Cloud & Architecture</span>
         </h1>
-        <p>Projets AWS, Azure et Infrastructure as Code.</p>
+        <p class="header__subtitle">
+          Projets AWS, Azure et Infrastructure as Code
+        </p>
+        <p class="header__description">
+          Conception et déploiement d'infrastructures cloud automatisées,<br>
+          sécurisées et optimisées pour la production.
+        </p>
       </div>
+    </div>
+    
+    <!-- Theme Toggle Button -->
+    <div class="theme-toggle" aria-label="Basculer entre les thèmes clair et sombre" role="button" tabindex="0">
+      <div class="theme-toggle__icon">
+        <svg class="sun" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 17a5 5 0 1 0 0-10 5 5 0 0 0 0 10zm0 2a7 7 0 1 1 0-14 7 7 0 0 1 0 14z"/>
+        </svg>
+        <svg class="moon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/>
+        </svg>
+      </div>
+      <span class="theme-toggle__text">Thème</span>
     </div>
   </header>
 
   <main role="main">
-
-    <section class="work" id="work">
+    <section class="work" id="work" data-aos="fade-up">
       <div class="row">
-        <h2>Projets Cloud</h2>
+        <h2 data-aos="fade-up">Projets Cloud</h2>
+        <p class="section__subtitle">Infrastructures cloud automatisées et sécurisées</p>
+
+        <!-- Statistiques du domaine -->
+        <div class="domain-stats" id="statistics" data-aos="fade-up" data-aos-delay="200">
+          <div class="stats__grid">
+            <div class="stat__card">
+              <div class="stat__value">6</div>
+              <div class="stat__label">Projets complets</div>
+            </div>
+            <div class="stat__card">
+              <div class="stat__value">500+</div>
+              <div class="stat__label">Heures investies</div>
+            </div>
+            <div class="stat__card">
+              <div class="stat__value">8</div>
+              <div class="stat__label">Technologies maîtrisées</div>
+            </div>
+          </div>
+        </div>
 
         <div class="work__boxes">
-
           <!-- AWS Infra -->
-          <div class="work__box">
+          <div class="work__box" data-aos="fade-up" data-aos-delay="100">
             <div class="work__text">
-              <h3>AWS Infrastructure Deploy</h3>
-              <p>Automatisation du déploiement d’une infrastructure AWS complète.</p>
-              <ul class="work__list">
-                <li>AWS</li>
-                <li>Terraform (HCL)</li>
-                <li>IaC</li>
-              </ul>
+              <h3 class="work__title">AWS Infrastructure Deploy</h3>
+              <p class="work__short-desc">Automatisation du déploiement d'une infrastructure AWS complète avec Terraform.</p>
+              
+              <div class="work__section">
+                <h4 class="work__section-title">Contexte</h4>
+                <p>Déploiement d'une infrastructure cloud modulaire et reproductible pour héberger des applications web critiques. Objectif : garantir une disponibilité élevée avec tolérance aux pannes.</p>
+              </div>
+              
+              <div class="work__section">
+                <h4 class="work__section-title">Stack Technique</h4>
+                <ul class="work__list">
+                  <li>AWS (EC2, S3, RDS, VPC, IAM, CloudFront, Route53)</li>
+                  <li>Terraform (HCL, modules, backend S3)</li>
+                  <li>Infrastructure as Code</li>
+                </ul>
+              </div>
+              
+              <div class="work__section">
+                <h4 class="work__section-title">Rôle et Responsabilités</h4>
+                <p>Conception et développement des templates Terraform pour provisionner automatiquement les ressources AWS. Configuration des politiques de sécurité et des règles de réseau.</p>
+              </div>
+              
+              <div class="work__section">
+                <h4 class="work__section-title">Points Clés</h4>
+                <ul class="work__list">
+                  <li><strong>Modularité :</strong> Architecture modulaire réutilisable pour différents environnements</li>
+                  <li><strong>Sécurité :</strong> Security Groups restrictifs, IAM roles avec principe de moindre privilège, chiffrement KMS</li>
+                  <li><strong>Automatisation :</strong> Déploiement en une commande, gestion d'état avec backend S3</li>
+                  <li><strong>Disponibilité :</strong> Configuration multi-AZ pour haute disponibilité</li>
+                </ul>
+              </div>
+
               <div class="work__links">
-                <a href="https://github.com/Madi-Toumani-benmohamed/Cloud-AWS-Infra-Deploy" class="link__text">
-                  Voir le projet <span>&rarr;</span>
+                <a href="https://github.com/Madi-Toumani-benmohamed/Cloud-AWS-Infra-Deploy" class="link__text" target="_blank" rel="noopener">
+                  Voir le code source <span>&rarr;</span>
                 </a>
               </div>
             </div>
             <div class="work__image-box">
-              <img src="../images/cloud/aws-infra.jpg" class="work__image" alt="AWS Infrastructure" />
+              <img src="../images/cloud/aws-infra.jpg" class="work__image" alt="AWS Infrastructure">
             </div>
           </div>
 
           <!-- AWS EKS -->
-          <div class="work__box">
+          <div class="work__box" data-aos="fade-up" data-aos-delay="200">
             <div class="work__text">
-              <h3>AWS ECS / EKS Kubernetes</h3>
-              <p>Déploiement d’un cluster Kubernetes sur AWS pour héberger des applications web.</p>
-              <ul class="work__list">
-                <li>Kubernetes</li>
-                <li>AWS ECS / EKS</li>
-                <li>HCL</li>
-              </ul>
+              <h3 class="work__title">AWS ECS / EKS Kubernetes</h3>
+              <p class="work__short-desc">Déploiement d'un cluster Kubernetes sur AWS pour héberger des applications web.</p>
+              
+              <div class="work__section">
+                <h4 class="work__section-title">Contexte</h4>
+                <p>Mise en place d'une plateforme d'orchestration conteneurisée scalable sur AWS. Besoin de gérer des applications avec des exigences de disponibilité et de scalabilité élevées.</p>
+              </div>
+              
+              <div class="work__section">
+                <h4 class="work__section-title">Stack Technique</h4>
+                <ul class="work__list">
+                  <li>AWS EKS (Elastic Kubernetes Service)</li>
+                  <li>AWS ECS (Elastic Container Service)</li>
+                  <li>Kubernetes (v1.27+)</li>
+                  <li>HCL (Terraform)</li>
+                  <li>Docker</li>
+                </ul>
+              </div>
+              
+              <div class="work__section">
+                <h4 class="work__section-title">Points Clés</h4>
+                <ul class="work__list">
+                  <li><strong>Scalabilité :</strong> Auto-scaling des pods et nodes en fonction de la charge</li>
+                  <li><strong>Haute disponibilité :</strong> Déploiement multi-AZ avec load balancers applicatifs</li>
+                  <li><strong>Intégration :</strong> Avec les services AWS (ALB, IAM, CloudWatch)</li>
+                  <li><strong>Sécurité :</strong> Configuration des permissions RBAC et des Network Policies</li>
+                </ul>
+              </div>
+
               <div class="work__links">
-                <a href="https://github.com/Madi-Toumani-benmohamed/Cloud-AWS-ECS-EKS" class="link__text">
-                  Voir le projet <span>&rarr;</span>
+                <a href="https://github.com/Madi-Toumani-benmohamed/Cloud-AWS-ECS-EKS" class="link__text" target="_blank" rel="noopener">
+                  Voir le code source <span>&rarr;</span>
                 </a>
               </div>
             </div>
             <div class="work__image-box">
-              <img src="../images/cloud/aws-eks.png" class="work__image" alt="AWS EKS Kubernetes" />
+              <img src="../images/cloud/aws-eks.png" class="work__image" alt="AWS EKS Kubernetes">
             </div>
           </div>
 
           <!-- Azure Infra -->
-          <div class="work__box">
+          <div class="work__box" data-aos="fade-up" data-aos-delay="300">
             <div class="work__text">
-              <h3>Azure Infrastructure Deploy</h3>
-              <p>Infrastructure Azure automatisée avec Terraform et Ansible.</p>
-              <ul class="work__list">
-                <li>Azure</li>
-                <li>Terraform</li>
-                <li>Ansible</li>
-              </ul>
+              <h3 class="work__title">Azure Infrastructure Deploy</h3>
+              <p class="work__short-desc">Infrastructure Azure automatisée avec Terraform et Ansible.</p>
+              
+              <div class="work__section">
+                <h4 class="work__section-title">Contexte</h4>
+                <p>Provisionnement complet d'infrastructures Microsoft Azure avec automatisation. Migration d'applications existantes vers le cloud Azure.</p>
+              </div>
+              
+              <div class="work__section">
+                <h4 class="work__section-title">Stack Technique</h4>
+                <ul class="work__list">
+                  <li>Microsoft Azure</li>
+                  <li>Terraform (IaC)</li>
+                  <li>Ansible (Configuration Management)</li>
+                  <li>Azure CLI</li>
+                </ul>
+              </div>
+              
+              <div class="work__section">
+                <h4 class="work__section-title">Points Clés</h4>
+                <ul class="work__list">
+                  <li><strong>Automatisation :</strong> Terraform pour le provisionnement, Ansible pour la configuration</li>
+                  <li><strong>Réseau :</strong> Configuration de VNet, Subnets, Network Security Groups (NSG)</li>
+                  <li><strong>Calcul :</strong> Déploiement de VM, VM Scale Sets, Load Balancer</li>
+                  <li><strong>Stockage :</strong> Managed Disks, Blob Storage, File Storage</li>
+                </ul>
+              </div>
+
               <div class="work__links">
-                <a href="https://github.com/Madi-Toumani-benmohamed/Cloud-Azure-Infra-Deploy" class="link__text">
-                  Voir le projet <span>&rarr;</span>
+                <a href="https://github.com/Madi-Toumani-benmohamed/Cloud-Azure-Infra-Deploy" class="link__text" target="_blank" rel="noopener">
+                  Voir le code source <span>&rarr;</span>
                 </a>
               </div>
             </div>
             <div class="work__image-box">
-              <img src="../images/cloud/azure-infra.png" class="work__image" alt="Azure Infrastructure" />
+              <img src="../images/cloud/azure-infra.png" class="work__image" alt="Azure Infrastructure">
             </div>
           </div>
 
           <!-- Azure Module -->
-          <div class="work__box">
+          <div class="work__box" data-aos="fade-up" data-aos-delay="400">
             <div class="work__text">
-              <h3>Azure Terraform Module</h3>
-              <p>Module Terraform pour provisionnement automatique de ressources Azure.</p>
-              <ul class="work__list">
-                <li>Terraform</li>
-                <li>Azure</li>
-                <li>Modules IaC</li>
-              </ul>
+              <h3 class="work__title">Azure Terraform Module</h3>
+              <p class="work__short-desc">Module Terraform réutilisable pour provisionnement automatique de ressources Azure.</p>
+              
+              <div class="work__section">
+                <h4 class="work__section-title">Contexte</h4>
+                <p>Création de modules Terraform modulaires pour standardiser les déploiements Azure. Objectif : réduire la duplication de code et améliorer la maintenabilité.</p>
+              </div>
+              
+              <div class="work__section">
+                <h4 class="work__section-title">Stack Technique</h4>
+                <ul class="work__list">
+                  <li>Terraform</li>
+                  <li>Azure</li>
+                  <li>Modules IaC réutilisables</li>
+                  <li>Variables et outputs</li>
+                </ul>
+              </div>
+              
+              <div class="work__section">
+                <h4 class="work__section-title">Points Clés</h4>
+                <ul class="work__list">
+                  <li><strong>Réutilisabilité :</strong> Modules paramétrables pour différents environnements</li>
+                  <li><strong>Maintenance :</strong> Centralisation de la configuration et des bonnes pratiques</li>
+                  <li><strong>Documentation :</strong> README complet avec exemples d'utilisation</li>
+                  <li><strong>Versioning :</strong> Gestion des versions des modules</li>
+                </ul>
+              </div>
+
               <div class="work__links">
-                <a href="https://github.com/Madi-Toumani-benmohamed/Cloud-Azure-Module" class="link__text">
-                  Voir le projet <span>&rarr;</span>
+                <a href="https://github.com/Madi-Toumani-benmohamed/Cloud-Azure-Module" class="link__text" target="_blank" rel="noopener">
+                  Voir le code source <span>&rarr;</span>
                 </a>
               </div>
             </div>
             <div class="work__image-box">
-              <img src="../images/cloud/azure-module.png" class="work__image" alt="Azure Terraform Module" />
+              <img src="../images/cloud/azure-module.png" class="work__image" alt="Azure Terraform Module">
             </div>
           </div>
 
-          <!-- Azure Deploy -->
-          <div class="work__box">
+          <!-- Azure VM Deployment -->
+          <div class="work__box" data-aos="fade-up" data-aos-delay="500">
             <div class="work__text">
-              <h3>Azure VM Deployment</h3>
-              <p>Déploiement automatisé de machines virtuelles sur Azure.</p>
-              <ul class="work__list">
-                <li>Azure VM</li>
-                <li>Terraform</li>
-                <li>IaC</li>
-              </ul>
+              <h3 class="work__title">Azure VM Deployment</h3>
+              <p class="work__short-desc">Déploiement automatisé de machines virtuelles sur Azure.</p>
+              
+              <div class="work__section">
+                <h4 class="work__section-title">Contexte</h4>
+                <p>Automatisation complète du cycle de vie des VM Azure. Besoin de provisionner rapidement des environnements de développement et de test.</p>
+              </div>
+              
+              <div class="work__section">
+                <h4 class="work__section-title">Stack Technique</h4>
+                <ul class="work__list">
+                  <li>Azure VM (Dv3, Bs series)</li>
+                  <li>Terraform</li>
+                  <li>IaC</li>
+                  <li>Azure Managed Disks</li>
+                </ul>
+              </div>
+              
+              <div class="work__section">
+                <h4 class="work__section-title">Points Clés</h4>
+                <ul class="work__list">
+                  <li><strong>Provisionnement :</strong> Automatique et rapide (moins de 2 minutes)</li>
+                  <li><strong>Configuration :</strong> Standardisée avec les bonnes pratiques Azure</li>
+                  <li><strong>Scalabilité :</strong> Facile à étendre avec des VM Scale Sets</li>
+                  <li><strong>Sécurité :</strong> Intégration avec Azure Security Center</li>
+                </ul>
+              </div>
+
               <div class="work__links">
-                <a href="https://github.com/Madi-Toumani-benmohamed/Cloud-Azure-Deploy" class="link__text">
-                  Voir le projet <span>&rarr;</span>
+                <a href="https://github.com/Madi-Toumani-benmohamed/Cloud-Azure-Deploy" class="link__text" target="_blank" rel="noopener">
+                  Voir le code source <span>&rarr;</span>
                 </a>
               </div>
             </div>
             <div class="work__image-box">
-              <img src="../images/cloud/azure-vm.png" class="work__image" alt="Azure VM Deployment" />
+              <img src="../images/cloud/azure-vm.png" class="work__image" alt="Azure VM Deployment">
             </div>
           </div>
 
           <!-- Cloud Lab Tool -->
-          <div class="work__box">
+          <div class="work__box" data-aos="fade-up" data-aos-delay="600">
             <div class="work__text">
-              <h3>Cloud Lab Automation Tool</h3>
-              <p>Outil en C pour automatiser la création de labs cloud.</p>
-              <ul class="work__list">
-                <li>C</li>
-                <li>Automation</li>
-                <li>Cloud labs</li>
-              </ul>
+              <h3 class="work__title">Cloud Lab Automation Tool</h3>
+              <p class="work__short-desc">Outil en C pour automatiser la création de labs cloud.</p>
+              
+              <div class="work__section">
+                <h4 class="work__section-title">Contexte</h4>
+                <p>Développement d'un outil CLI pour créer rapidement des environnements de test cloud. Permet de simuler différents scénarios d'infrastructure pour des tests ou des démonstrations.</p>
+              </div>
+              
+              <div class="work__section">
+                <h4 class="work__section-title">Stack Technique</h4>
+                <ul class="work__list">
+                  <li>C (langage)</li>
+                  <li>Automation</li>
+                  <li>Cloud labs</li>
+                  <li>CLI (Command Line Interface)</li>
+                </ul>
+              </div>
+              
+              <div class="work__section">
+                <h4 class="work__section-title">Points Clés</h4>
+                <ul class="work__list">
+                  <li><strong>Performance :</strong> Outil compilé en natif pour une exécution rapide</li>
+                  <li><strong>Portabilité :</strong> Fonctionne sur Linux et Windows</li>
+                  <li><strong>Simplicité :</strong> Interface CLI intuitive avec des commandes claires</li>
+                  <li><strong>Extensibilité :</strong> Architecture modulaire pour ajouter de nouveaux types de labs</li>
+                </ul>
+              </div>
+
               <div class="work__links">
-                <a href="https://github.com/Madi-Toumani-benmohamed/Cloud-AWS-DeployEasy" class="link__text">
-                  Voir le projet <span>&rarr;</span>
+                <a href="https://github.com/Madi-Toumani-benmohamed/Cloud-AWS-DeployEasy" class="link__text" target="_blank" rel="noopener">
+                  Voir le code source <span>&rarr;</span>
                 </a>
               </div>
             </div>
             <div class="work__image-box">
-              <img src="../images/cloud/cloud-lab.png" class="work__image" alt="Cloud Lab Tool" />
+              <img src="../images/cloud/cloud-lab.png" class="work__image" alt="Cloud Lab Tool">
             </div>
           </div>
-
         </div>
       </div>
     </section>
@@ -183,43 +355,84 @@
           <div class="about__text">
             <p>
               Ce domaine regroupe mes travaux autour des architectures cloud publiques AWS et Azure,
-              ainsi que de l’infrastructure as code avec Terraform et des patterns d’automatisation.
+              ainsi que de l'infrastructure as code avec Terraform et des patterns d'automatisation.
             </p>
+            <p>
+              J'ai développé une expertise dans :
+            </p>
+            <ul class="about__list">
+              <li><strong>La conception d'architectures cloud résilientes</strong> avec tolérance aux pannes</li>
+              <li><strong>L'automatisation du provisionnement</strong> via Terraform et Ansible</li>
+              <li><strong>La mise en place de bonnes pratiques de sécurité cloud</strong> (IAM, networking, chiffrement)</li>
+              <li><strong>L'optimisation des coûts</strong> grâce à l'automatisation et au right-sizing</li>
+              <li><strong>La gestion de l'infrastructure as code</strong> pour une reproductibilité totale</li>
+            </ul>
+            <div class="about__cta">
+              <a href="../index.html" class="btn btn--outline">Retour à l'accueil</a>
+            </div>
           </div>
         </div>
       </div>
     </section>
-
   </main>
 
-  <!-- ***** Footer ***** -->
+  <!-- Progress bar -->
+  <div class="progress-bar"></div>
+
+  <!-- Theme Toggle Button -->
+  <div class="theme-toggle" aria-label="Basculer entre les thèmes clair et sombre" role="button" tabindex="0">
+    <div class="theme-toggle__icon">
+      <svg class="sun" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 17a5 5 0 1 0 0-10 5 5 0 0 0 0 10zm0 2a7 7 0 1 1 0-14 7 7 0 0 1 0 14z"/>
+      </svg>
+      <svg class="moon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/>
+      </svg>
+    </div>
+    <span class="theme-toggle__text">Thème</span>
+  </div>
 
   <footer role="contentinfo" class="footer">
     <div class="row">
-      <!-- Update the links to point to your accounts -->
+      <div class="footer__content">
+        <p class="footer__copyright">&copy; 2026 - Ben-mohamed Madi</p>
+        <div class="footer__links">
+          <a href="../assets/CV.pdf" class="footer__link">CV</a>
+          <a href="../index.html#contact" class="footer__link">Contact</a>
+          <a href="../index.html" class="footer__link">Accueil</a>
+        </div>
+      </div>
       <ul class="footer__social-links">
         <li class="footer__social-link-item">
-          <a href="https://www.root-me.org/Hawki?lang=fr" title="Link to Root-Me Profile">
+          <a href="https://www.root-me.org/Hawki?lang=fr" title="Root-Me Profile">
             <img src="../images/rootme.png" class="footer__social-image" alt="Root-Me">
           </a>
         </li>
         <li class="footer__social-link-item">
-          <a href=" https://github.com/Madi-Toumani-benmohamed/" title="Link to Github Profile">
+          <a href="https://github.com/Madi-Toumani-benmohamed/" title="Github Profile">
             <img src="../images/github.svg" class="footer__social-image" alt="Github">
           </a>
         </li>
-      
         <li class="footer__social-link-item">
-          <a href="https://www.linkedin.com/in/ben-mohamed-madi/" title="Link to Linkedin Profile">
-            <img src="../images/linkedin.svg" title="Link to Linkedin Profile" class="footer__social-image" alt="Linkedin">
+          <a href="https://www.linkedin.com/in/ben-mohamed-madi/" title="Linkedin Profile">
+            <img src="../images/linkedin.svg" class="footer__social-image" alt="Linkedin">
           </a>
         </li>
       </ul>
+    </div>
+  </footer>
 
-
-      <p>
-        &copy; 2026 - Ben-mohamed Madi</a>.
-      </p>
-
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out-sine',
+      delay: 100,
+      once: true,
+      mirror: false,
+      anchorPlacement: 'top-bottom'
+    });
+  </script>
+  <script src="../index.js"></script>
 </body>
 </html>
